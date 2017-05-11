@@ -26,6 +26,7 @@ h3 {
 font-family: "Montserrat";
 font-size: 16px;
 margin-left: 41px;
+margin-top: 30px;
 }
 
 .list-group-item-heading {
@@ -51,7 +52,7 @@ margin-left: 41px;
   margin: 25px auto auto auto;
   line-height: 28px;
   width: 80%;
-  height: 25px; 
+  height: 25px;
   vertical-align: middle;
   background-color: rgb(63, 135, 51);
   border-radius: 10px;
@@ -73,9 +74,13 @@ header nav ul li a  {
 text-decoration: none;
 color: black;
 }
+
 header nav ul li {
-  float: left;
+    list-style-type: none;
+}
+header nav ul li div {
+  display: inline-block;
   margin-left: 3px;
   margin-top: 5px;
-  list-style-type: none;
+
 }

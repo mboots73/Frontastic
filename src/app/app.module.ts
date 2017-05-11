@@ -24,10 +24,6 @@ import { ThreejsComponent } from './courses/threejs/threejs.component';
 import { EmberjsComponent } from './courses/emberjs/emberjs.component';
 import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
