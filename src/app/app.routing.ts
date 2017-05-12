@@ -1,7 +1,7 @@
 import {Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
-import { ProfilecomponentComponent } from './profilecomponent/profilecomponent.component';
+import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProgressComponent } from './progress/progress.component';
 import { CoursesComponent } from './courses/courses.component';
@@ -14,8 +14,9 @@ import { AngularjsComponent } from './courses/angularjs/angularjs.component';
 import { EmberjsComponent } from './courses/emberjs/emberjs.component';
 import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
 
+
 const APP_ROUTES: Routes = [
-  { path: 'profile', component: ProfilecomponentComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: '', component: HomeComponent },
   { path: 'profile/settings', component: SettingsComponent },
   { path: 'profile/progress', component: ProgressComponent },
@@ -26,7 +27,7 @@ const APP_ROUTES: Routes = [
   { path: 'courses/threejs', component: ThreejsComponent },
   { path: 'courses/angularjs', component: AngularjsComponent },
   { path: 'courses/emberjs', component: EmberjsComponent },
-  { path: 'courses/bootstrap', component: BootstrapComponent },
+  { path: 'courses/bootstrap', component: BootstrapComponent }
 
 ];
 

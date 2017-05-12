@@ -84,3 +84,21 @@ header nav ul li div {
   margin-top: 5px;
 
 }
+div tabs tab ul li {
+  margin-left: 16px;
+  list-style-type: none;
+}
+
+div tabs tab ul li span{
+
+    font: 11.5px "Libre Baskerville";
+}
+
+div tabs tab p {
+  margin-left: 55px;
+  font: 11.5px "Libre Baskerville";
+}
+
+#lessons {
+ font-weight: bold;
+}

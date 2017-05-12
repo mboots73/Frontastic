@@ -24,14 +24,14 @@ ul li {
 }
 
 ul h2 {
-  font-size: 15px "Libre Baskerville";
+  font: 15px "Libre Baskerville";
 }
 
 ul li {
-  font-size: 10px "Libre Baskerville";
+  font: 10px "Libre Baskerville";
 }
 
 h1 {
-    font-size: 22px "Libre Baskerville";
+    font: 22px "Libre Baskerville";
   margin-left: 60px;
 }

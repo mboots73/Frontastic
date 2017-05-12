@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeadercomponentComponent } from './headercomponent.component';
-import { ProfilecomponentComponent } from './profilecomponent/profilecomponent.component';
+import { HeaderComponent } from './header.component';
+import { ProfileComponent } from './profile/profile.component';
 import {routing } from './app.routing';
 import { HomeComponent } from './home.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -23,12 +23,14 @@ import { AngularjsComponent } from './courses/angularjs/angularjs.component';
 import { ThreejsComponent } from './courses/threejs/threejs.component';
 import { EmberjsComponent } from './courses/emberjs/emberjs.component';
 import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
+import {TabsComponent} from './courses/html/tabs.component';
+import {TabComponent} from './courses/html/tab.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeadercomponentComponent,
-    ProfilecomponentComponent,
+    HeaderComponent,
+    ProfileComponent,
     HomeComponent,
     SettingsComponent,
     ProgressComponent,
@@ -43,7 +45,9 @@ import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
     AngularjsComponent,
     ThreejsComponent,
     EmberjsComponent,
-    BootstrapComponent
+    BootstrapComponent,
+    TabsComponent,
+    TabComponent
 
   ],
   imports: [
@@ -53,6 +57,7 @@ import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
     routing
   ],
   providers: [ CourseService ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
