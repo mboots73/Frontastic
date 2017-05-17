@@ -26,12 +26,11 @@
   <div class="border-left-down">
     <span>
     <br />
-    <p>Title: Html </p>
+    <p>Title: {{name}} </p>
     <hr />
-    <p>Category: Webdesign</p>
+    <p>Category: {{category}}</p>
 
-    <hr />
-    <p>Description:</p>
+
     </span>
 
   </div>
@@ -40,13 +39,13 @@
   <div class="border-right">
     <tabs>
       <tab [tabTitle]="'Overview'"><p>
-        In this course you will learn the basics of HTML. Hypertext Markup Language(HTML) is the standard language for creating web-pages with the goal to define the structure of it. HTML works with so-called tags that describe the different elements in your document. Mostly HTML is combined with CSS and JavaScript, which will be covered in other courses. 
+          {{description}}
       </p></tab>
-      <tab tabTitle="Lessons" style="color: #DFDCE3;">
+      <tab tabTitle="Lessons" >
         <ul>
-          <li> <a href="courses/html/lesson1" >Lesson 1:</a> <span>Structure</span> </li>
-          <li> <a >Lesson 2: </a> <span>HTML Elements</span></li>
-          <li> <a >Lesson 3: </a><span>Your first web-page</span></li>
+          <li> <a href="courses/html/lesson1" >Lesson 1:</a> <span>{{lesson1}}</span> </li>
+          <li> <a >Lesson 2: </a> <span>{{lesson2}}</span></li>
+          <li> <a >Lesson 3: </a><span>{{lesson3}}</span></li>
         </ul>
       </tab>
     </tabs>

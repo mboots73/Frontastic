@@ -28,6 +28,8 @@ import {TabComponent} from './courses/html/tab.component';
 import { UsersComponent } from './users/users.component';
 import { Lesson1Component } from './courses/html/lesson1/lesson1.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +53,8 @@ import { Lesson1Component } from './courses/html/lesson1/lesson1.component';
     TabsComponent,
     TabComponent,
     UsersComponent,
-    Lesson1Component
+    Lesson1Component,
+
 
   ],
   imports: [
