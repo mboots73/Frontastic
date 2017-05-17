@@ -1,0 +1,38 @@
+a .list-group-item-heading {
+  font: 13px bold "Montserrat";
+}
+
+a .list-group-item-heading, .list-group-item-clearfix {
+    text-decoration: none;
+      color: black;
+}
+
+.list-group-item-clearfix {
+  border: solid 0.001em rgb(126, 197, 122);
+  border-radius: 10px;
+  width: 260px;
+  height: 260px;
+  margin: 35px 55px 35px 70px;
+  display: flex;
+  justify-content: flex-start space-around;
+  flex-direction: column;
+  float: left;
+  font: 12px "Libre Baskerville";
+}
+
+.img-responsive {
+  height: 140px;
+  width: auto;
+  display: block;
+  margin:auto;
+  border-radius: 10px;
+}
+
+.list-group-item-text, a .list-group-item-heading {
+  text-align: center;
+}
+
+.list-group-item-clearfix:hover {
+  background-color: rgb(126, 197, 122);
+  opacity: 0.5;
+}
