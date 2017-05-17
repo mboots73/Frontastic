@@ -11,14 +11,14 @@
 
   <div class="border-left-up">
     <span>
-      <img class = "img-responsive"
-          src = "http://w3widgets.com/responsive-slider/img/html5.png"
-          style = "..."/>
+      <img id = "myImage" class = "img-responsive"
+          src = "{{urlName}}"
+          />
           <hr />
   </span>
     <div>
       <div id="enroll">
-        <span>Enroll</span>
+        <button onclick = "document.getElementById('myImage').src='https://vignette3.wikia.nocookie.net/gotascent/images/c/c0/Work_In_Progress.png/revision/latest?cb=20140715110801'">Enroll</button>
       </div>
     </div>
   </div>
@@ -40,13 +40,13 @@
   <div class="border-right">
     <tabs>
       <tab [tabTitle]="'Overview'"><p>
-        This course blablab
+        In this course you will learn the basics of HTML. Hypertext Markup Language(HTML) is the standard language for creating web-pages with the goal to define the structure of it. HTML works with so-called tags that describe the different elements in your document. Mostly HTML is combined with CSS and JavaScript, which will be covered in other courses. 
       </p></tab>
-      <tab tabTitle="Lessons">
+      <tab tabTitle="Lessons" style="color: #DFDCE3;">
         <ul>
-          <li> <span id="lessons">Lesson 1:</span> <span>Structure</span> </li>
-          <li> <span id="lessons">Lesson 2: </span> <span>HTML Elements</span></li>
-          <li> <span id="lessons">Lesson 3: </span><span>Your first web-page</span></li>
+          <li> <a href="courses/html/lesson1" >Lesson 1:</a> <span>Structure</span> </li>
+          <li> <a >Lesson 2: </a> <span>HTML Elements</span></li>
+          <li> <a >Lesson 3: </a><span>Your first web-page</span></li>
         </ul>
       </tab>
     </tabs>

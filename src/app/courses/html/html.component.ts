@@ -9,10 +9,11 @@ import {TabComponent} from './tab.component';
   styleUrls: ['./html.component.css']
 })
 export class HtmlComponent implements OnInit {
-
+  public urlName =  'http://w3widgets.com/responsive-slider/img/html5.png';
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

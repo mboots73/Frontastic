@@ -1,14 +1,17 @@
 a .list-group-item-heading {
-  font: 13px bold "Montserrat";
+  font-size: 16px;
+font-weight: normal;
+  font-family: Cambria;
 }
 
 a .list-group-item-heading, .list-group-item-clearfix {
     text-decoration: none;
-      color: black;
+      color: #f2efe9;
+
 }
 
 .list-group-item-clearfix {
-  border: solid 0.001em rgb(126, 197, 122);
+  border: solid 0.001em  transparent;
   border-radius: 10px;
   width: 260px;
   height: 260px;
@@ -17,7 +20,9 @@ a .list-group-item-heading, .list-group-item-clearfix {
   justify-content: flex-start space-around;
   flex-direction: column;
   float: left;
-  font: 12px "Libre Baskerville";
+  font-size: 14px;
+font-weight: normal;
+  font-family: Cambria;
 }
 
 .img-responsive {
@@ -33,6 +38,7 @@ a .list-group-item-heading, .list-group-item-clearfix {
 }
 
 .list-group-item-clearfix:hover {
-  background-color: rgb(126, 197, 122);
-  opacity: 0.5;
+  border: solid 0.001em  #F7B733;
+  background-color: #F7B733;
+  opacity: 0.6;
 }

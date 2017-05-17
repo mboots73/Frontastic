@@ -25,6 +25,8 @@ import { EmberjsComponent } from './courses/emberjs/emberjs.component';
 import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
 import {TabsComponent} from './courses/html/tabs.component';
 import {TabComponent} from './courses/html/tab.component';
+import { UsersComponent } from './users/users.component';
+import { Lesson1Component } from './courses/html/lesson1/lesson1.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import {TabComponent} from './courses/html/tab.component';
     EmberjsComponent,
     BootstrapComponent,
     TabsComponent,
-    TabComponent
+    TabComponent,
+    UsersComponent,
+    Lesson1Component
 
   ],
   imports: [
