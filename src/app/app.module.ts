@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { ProfileComponent } from './profile/profile.component';
-import {routing } from './app.routing';
+import { routing } from './app.routing';
 import { HomeComponent } from './home.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProgressComponent } from './progress/progress.component';
@@ -23,10 +23,11 @@ import { AngularjsComponent } from './courses/angularjs/angularjs.component';
 import { ThreejsComponent } from './courses/threejs/threejs.component';
 import { EmberjsComponent } from './courses/emberjs/emberjs.component';
 import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
-import {TabsComponent} from './courses/html/tabs.component';
-import {TabComponent} from './courses/html/tab.component';
+import { TabsComponent} from './courses/template/tabs.component';
+import { TabComponent} from './courses/template/tab.component';
 import { UsersComponent } from './users/users.component';
 import { Lesson1Component } from './courses/html/lesson1/lesson1.component';
+import { TemplateComponent } from './courses/template/template.component';
 
 
 
@@ -54,6 +55,7 @@ import { Lesson1Component } from './courses/html/lesson1/lesson1.component';
     TabComponent,
     UsersComponent,
     Lesson1Component,
+    TemplateComponent,
 
 
   ],

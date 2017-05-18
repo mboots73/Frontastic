@@ -1,53 +1,6 @@
-<app-headercomponent></app-headercomponent>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<div class="container">
+  <app-headercomponent></app-headercomponent>
 
-
-  <div class="border-left-up">
-    <span>
-      <img id = "myImage" class = "img-responsive"
-          src = "{{urlName}}"
-          />
-          <hr />
-  </span>
-    <div>
-      <div id="enroll">
-        <button onclick = "document.getElementById('myImage').src='https://vignette3.wikia.nocookie.net/gotascent/images/c/c0/Work_In_Progress.png/revision/latest?cb=20140715110801'">Enroll</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="border-left-down">
-    <span>
-    <br />
-    <p>Title: {{name}} </p>
-    <hr />
-    <p>Category: {{category}}</p>
-
-
-    </span>
-
-  </div>
-
-
-  <div class="border-right">
-    <tabs>
-      <tab [tabTitle]="'Overview'"><p>
-          {{description}}
-      </p></tab>
-      <tab tabTitle="Lessons" >
-        <ul>
-          <li> <a href="courses/html/lesson1" >Lesson 1:</a> <span>{{lesson1}}</span> </li>
-          <li> <a >Lesson 2: </a> <span>{{lesson2}}</span></li>
-          <li> <a >Lesson 3: </a><span>{{lesson3}}</span></li>
-        </ul>
-      </tab>
-    </tabs>
-
-  </div>
+  <app-template name = "HTML" category ="WebStructure" urlName=
+  "http://w3widgets.com/responsive-slider/img/html5.png" description=
+  "In this course you will learn the basics of HTML. Hypertext Markup Language(HTML) is the standard language for creating web-pages with the goal to define the structure of it. HTML works with so-called tags that describe the different elements in your document. Mostly HTML is combined with CSS and JavaScript, which will be covered in other courses." lesson1="
+  Structure" lesson2="HTML Elements"></app-template>
