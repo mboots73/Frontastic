@@ -13,6 +13,8 @@ import { ThreejsComponent } from './courses/threejs/threejs.component';
 import { AngularjsComponent } from './courses/angularjs/angularjs.component';
 import { EmberjsComponent } from './courses/emberjs/emberjs.component';
 import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
+import { UsersComponent } from './users/users.component';
+import { Lesson1Component } from './courses/html/lesson1/lesson1.component';
 
 
 const APP_ROUTES: Routes = [
@@ -27,7 +29,9 @@ const APP_ROUTES: Routes = [
   { path: 'courses/threejs', component: ThreejsComponent },
   { path: 'courses/angularjs', component: AngularjsComponent },
   { path: 'courses/emberjs', component: EmberjsComponent },
-  { path: 'courses/bootstrap', component: BootstrapComponent }
+  { path: 'courses/bootstrap', component: BootstrapComponent },
+    { path: 'profile/users', component: UsersComponent },
+        { path: 'courses/html/lesson1', component: Lesson1Component },
 
 ];
 

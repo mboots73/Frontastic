@@ -18,7 +18,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 }
 
 html {
-  width: 0px;
+  background-color: #DFDCE3;
+    width: 0px;
   height: 0px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -37,16 +38,14 @@ html {
 }
 
 body {
-  background: white;
+  background: #DFDCE3;
   -webkit-font-smoothing: antialiased;
-  font: 15px 400 "Julius Sans One";
   height: 0px;
   line-height: 1.6rem;
   min-height: 100%;
 }
-
 header {
-  background: linear-gradient(to top, rgba(71, 156, 94, 0.96) 0, rgb(126, 197, 122) 100%);
+  background: linear-gradient(#F7B733  97%, #FC4A1A 3%);
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
   display: block;
@@ -75,24 +74,25 @@ header>nav>ul>li {
 }
 
 header>nav>ul>li:hover {
-  background-color: rgba(127, 198, 123, 0.84);
-  color: rgba(73, 99, 61, 1);
+  background-color: #f15329;
+  color: black;
 }
 
 header>nav>ul>li a+div {
-  background: linear-gradient(to top, rgba(71, 156, 94, 0.96) 0, rgb(126, 197, 122) 100%);
+  background: linear-gradient(to top, #F7B733 97%, #FC4A1A 1%);
   border-radius: 0 0 2px 2px;
-  box-shadow: 0 3px 1px rgba(0, 0, 0, .05);
+  /*box-shadow: 0 3px 1px rgba(0, 0, 0, .05);*/
   display: none;
   font-size: 15px;
+  font-family: Cambria, serif;
   position: absolute;
-  width: 109px;
+  width: 119px;
 }
 
 header>nav>ul>li:hover a+div {
   display: block;
-  background-color: rgba(127, 198, 123);
-  color: rgba(73, 99, 61, 1);
+  background-color: #f15329;
+  color: #DFDCE3;
 }
 
 header>nav>ul>li a+div>ul {
@@ -107,17 +107,25 @@ header>nav>ul>li a+div>ul>li {
 header>nav>ul>li a+div>ul>li>a {
   color: rgba(255, 255, 255, .9);
   display: block;
-  font-size: 8px;
+  font-size: 10px;
+  font-weight: normal;
+  font-family: Cambria;
   letter-spacing: 1.5px;
-  padding: 1.25rem 1.5rem;
+  padding: 1.20rem 1.5rem;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 header>nav>ul>li a+div>ul>li:hover>a {
-  background-color: rgba(127, 198, 123);
-  color: rgba(73, 99, 61, 1);
+  background-color: #f15329;
+    color: #DFDCE3;
 }
+header>nav>ul>li>a> div {
+  font-size: 24px;
+font-weight: normal;
+  font-family: Cambria;
+}
+
 
 header>nav>ul>li>a {
   align-items: flex-start;
@@ -132,10 +140,12 @@ header>nav>ul>li>a {
   transition: all linear 0.1s;
 }
 
-header>nav>ul>li>a>div>span {
-  color: rgba(100, 147, 78, .75);
+header>nav>ul>li>a>div>a {
+  color: black;
   display: block;
-  font: 8px italic "Libre Baskerville", serif;
+  font-size: 19px;
+  font-weight: normal;
+  font-family: Cambria;
   line-height: 1rem;
   max-width: 260px;
 }
@@ -143,21 +153,23 @@ header>nav>ul>li>a>div>span {
 @media (min-width: 990px) {
   header>nav>ul>li>a {
     max-width: 500px;
-    font-size: 20px;
+    font-size: 19px;
+    font-weight: normal;
+    font-family: Cambria;
     line-height: 2rem;
   }
 }
 
 header nav ul li a:hover {
-  background-color: rgba(127, 198, 123);
-  color: rgba(73, 99, 61, 1);
+  background-color: #f15329;
+  color: #DFDCE3;
 }
 
 header img {
   position: absolute;
   left: 85%;
   width: auto;
-  height: 4rem;
+  height: 100%;
 }
 
 header nav ul #profile {

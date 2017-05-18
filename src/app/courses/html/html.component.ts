@@ -1,12 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../course';
-import {TabsComponent} from './tabs.component';
-import {TabComponent} from './tab.component';
+
 
 @Component({
   selector: 'app-html',
-  templateUrl: './html.component.html',
-  styleUrls: ['./html.component.css']
+  templateUrl: './html.component.html'
 })
 export class HtmlComponent implements OnInit {
 
@@ -14,5 +12,6 @@ export class HtmlComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

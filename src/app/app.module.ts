@@ -6,14 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { ProfileComponent } from './profile/profile.component';
-import {routing } from './app.routing';
+import { routing } from './app.routing';
 import { HomeComponent } from './home.component';
 import { SettingsComponent } from './settings/settings.component';
 import { ProgressComponent } from './progress/progress.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseListComponent } from './courses/course-list/course-list.component';
 import { CourseItemComponent } from './courses/course-list/course-item.component';
-import { CourseDetailComponent } from './courses/course-detail/course-detail.component';
 import { CourseService } from './courses/course.service';
 import { HtmlComponent } from './courses/html/html.component';
 import { CssComponent } from './courses/css/css.component';
@@ -23,8 +22,14 @@ import { AngularjsComponent } from './courses/angularjs/angularjs.component';
 import { ThreejsComponent } from './courses/threejs/threejs.component';
 import { EmberjsComponent } from './courses/emberjs/emberjs.component';
 import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
-import {TabsComponent} from './courses/html/tabs.component';
-import {TabComponent} from './courses/html/tab.component';
+import { TabsComponent} from './courses/template/tabs.component';
+import { TabComponent} from './courses/template/tab.component';
+import { UsersComponent } from './users/users.component';
+import { Lesson1Component } from './courses/html/lesson1/lesson1.component';
+import { TemplateComponent } from './courses/template/template.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -37,7 +42,6 @@ import {TabComponent} from './courses/html/tab.component';
     CoursesComponent,
     CourseListComponent,
     CourseItemComponent,
-    CourseDetailComponent,
     HtmlComponent,
     CssComponent,
     JavascriptComponent,
@@ -47,7 +51,12 @@ import {TabComponent} from './courses/html/tab.component';
     EmberjsComponent,
     BootstrapComponent,
     TabsComponent,
-    TabComponent
+    TabComponent,
+    UsersComponent,
+    Lesson1Component,
+    TemplateComponent,
+
+
 
   ],
   imports: [

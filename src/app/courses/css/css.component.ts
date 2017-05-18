@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-css',
-  templateUrl: './css.component.html',
-  styleUrls: ['./css.component.css']
+  templateUrl: './css.component.html'
 })
 export class CssComponent implements OnInit {
 

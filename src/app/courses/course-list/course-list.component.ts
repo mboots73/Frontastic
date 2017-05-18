@@ -11,15 +11,12 @@ import { CourseItemComponent } from './course-item.component';
 })
 export class CourseListComponent implements OnInit {
   courses: Course[] = [];
-  @Output() courseSelected = new EventEmitter<Course>();
 
   constructor(private courseService: CourseService) { }
 
   ngOnInit() {
     this.courses = this.courseService.getCourses();
   }
-  onSelected(course: Course) {
-    this.courseSelected.emit(course);
-  }
+
 
 }
