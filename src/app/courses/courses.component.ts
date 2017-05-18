@@ -5,7 +5,6 @@ import {Course } from './course';
   templateUrl: './courses.component.html'
 })
 export class CoursesComponent implements OnInit {
-  selectedCourse: Course;
   constructor() { }
 
   ngOnInit() {

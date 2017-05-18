@@ -18,7 +18,7 @@
   </span>
     <div>
       <div id="enroll">
-        <button onclick = "document.getElementById('myImage').src='https://vignette3.wikia.nocookie.net/gotascent/images/c/c0/Work_In_Progress.png/revision/latest?cb=20140715110801'">Enroll</button>
+        <button onclick="document.getElementById('myImage').src='https://vignette3.wikia.nocookie.net/gotascent/images/c/c0/Work_In_Progress.png/revision/latest?cb=20140715110801'">Enroll</button>
       </div>
     </div>
   </div>
@@ -38,14 +38,16 @@
 
   <div class="border-right">
     <tabs>
-      <tab [tabTitle]="'Overview'"><p>
+      <tab [tabTitle]="'Overview'">
+        <p>
           {{description}}
-      </p></tab>
-      <tab tabTitle="Lessons" >
+        </p>
+      </tab>
+      <tab tabTitle="Lessons">
         <ul>
-          <li> <a href="{{urlLesson1}}" >Lesson 1:</a> <span>{{lesson1}}</span> </li>
-          <li> <a >Lesson 2: </a> <span>{{lesson2}}</span></li>
-          <li> <a >Lesson 3: </a><span>{{lesson3}}</span></li>
+          <li> <a href="{{urlLesson1}}">Lesson 1:</a> <span>{{lesson1}}</span> </li>
+          <li> <a>Lesson 2: </a> <span>{{lesson2}}</span></li>
+          <li> <a>Lesson 3: </a><span>{{lesson3}}</span></li>
         </ul>
       </tab>
     </tabs>

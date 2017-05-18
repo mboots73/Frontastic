@@ -9,13 +9,13 @@ import {TabComponent} from './tab.component';
   styleUrls: ['./template.component.css']
 })
 export class TemplateComponent implements OnInit {
-  @Input() name:string;
-  @Input() category:string;
+  @Input() name: string;
+  @Input() category: string;
   @Input() urlName: string;
-    @Input() description: string;
-      @Input() lesson1: string;
-        @Input() lesson2: string;
-        @Input() urlLesson1: string;
+  @Input() description: string;
+  @Input() lesson1: string;
+  @Input() lesson2: string;
+  @Input() urlLesson1: string;
   constructor() { }
 
   ngOnInit() {

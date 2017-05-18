@@ -13,7 +13,6 @@ import { ProgressComponent } from './progress/progress.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseListComponent } from './courses/course-list/course-list.component';
 import { CourseItemComponent } from './courses/course-list/course-item.component';
-import { CourseDetailComponent } from './courses/course-detail/course-detail.component';
 import { CourseService } from './courses/course.service';
 import { HtmlComponent } from './courses/html/html.component';
 import { CssComponent } from './courses/css/css.component';
@@ -43,7 +42,6 @@ import { TemplateComponent } from './courses/template/template.component';
     CoursesComponent,
     CourseListComponent,
     CourseItemComponent,
-    CourseDetailComponent,
     HtmlComponent,
     CssComponent,
     JavascriptComponent,
