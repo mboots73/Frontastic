@@ -15,6 +15,7 @@ export class TemplateComponent implements OnInit {
     @Input() description: string;
       @Input() lesson1: string;
         @Input() lesson2: string;
+        @Input() urlLesson1: string;
   constructor() { }
 
   ngOnInit() {

@@ -7,3 +7,12 @@
     color: #DFDCE3;
     margin-top: 25px;
   }
+
+ul li {
+  font-weight: normal;
+  font-size: 15px;
+  font-family: Cambria, serif;
+  margin-left: 16px;
+  color: #DFDCE3;
+
+}

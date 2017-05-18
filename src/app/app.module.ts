@@ -31,6 +31,7 @@ import { TemplateComponent } from './courses/template/template.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,6 +57,7 @@ import { TemplateComponent } from './courses/template/template.component';
     UsersComponent,
     Lesson1Component,
     TemplateComponent,
+
 
 
   ],

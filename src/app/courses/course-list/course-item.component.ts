@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Course } from '../course';
 
 
@@ -10,9 +10,11 @@ import { Course } from '../course';
 export class CourseItemComponent implements OnInit {
   @Input() course: Course;
   courseId: number;
+
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }

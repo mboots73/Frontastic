@@ -12,7 +12,8 @@ export class CourseService {
     new Course('Angular.js', 'A JavaScript MVC framework', 'https://lh5.ggpht.com/jmf9wX16pWQWHFe7Polc1b_FjBkQIkpqwSIvyuCgOwn4M3akBLpkveqJXKy3PGHjAzk=h310-rw', '/courses/angularjs', '0'),
     new Course('Three.js', 'A JavaScript 3D library', 'http://www.weblisty.net/img/threejs-logo.png', '/courses/threejs', '0'),
     new Course('Ember.js', 'A JavaScript MVVM framework', 'https://upload.wikimedia.org/wikipedia/en/6/69/Ember.js_Logo_and_Mascot.png', '/courses/emberjs',  '0'),
-    new Course('Bootstrap', 'A framework with HTML/CSS templates', 'http://w3widgets.com/responsive-slider/img/bootstrap.png', '/courses/bootstrap',  '0')
+    new Course('Bootstrap', 'A framework with HTML/CSS templates', 'http://w3widgets.com/responsive-slider/img/bootstrap.png', '/courses/bootstrap',  '0'),
+    new Course('Add a new course', ' ', ' ', ' ', ' ')
   ];
   constructor() { }
 
