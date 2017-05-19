@@ -17,14 +17,18 @@ export class TemplateComponent implements OnInit {
   @Input() lesson2: string;
   @Input() urlLesson1: string;
   @Input() progressUrl: string;
-    @Input() finishedUrl: string;
-  element: HTMLElement;
+  @Input() finishedUrl: string;
   constructor() { }
 
   ngOnInit() {
   }
   progressImage() {
-  document.getElementById('myImage').setAttribute('src', this.progressUrl);
+
+   var progressImage = document.getElementById('myImage');
+   localStorage.setItem('progressImage', this.progressUrl);
+   console.log(progressImage);
+   this.urlName = localStorage.getItem('progressImage');
+   console.log(this.urlName);
 
   }
   finishedImage() {
