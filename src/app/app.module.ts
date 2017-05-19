@@ -25,8 +25,9 @@ import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
 import { TabsComponent} from './courses/template/tabs.component';
 import { TabComponent} from './courses/template/tab.component';
 import { UsersComponent } from './users/users.component';
-import { Lesson1Component } from './courses/html/lesson1/lesson1.component';
+import { Lesson1Component } from './courses/template/lesson1/lesson1.component';
 import { TemplateComponent } from './courses/template/template.component';
+import { NewcourseComponent } from './courses/newcourse/newcourse.component';
 
 
 
@@ -55,6 +56,7 @@ import { TemplateComponent } from './courses/template/template.component';
     UsersComponent,
     Lesson1Component,
     TemplateComponent,
+    NewcourseComponent,
 
 
 

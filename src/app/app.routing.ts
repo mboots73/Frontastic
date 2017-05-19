@@ -14,8 +14,8 @@ import { AngularjsComponent } from './courses/angularjs/angularjs.component';
 import { EmberjsComponent } from './courses/emberjs/emberjs.component';
 import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
 import { UsersComponent } from './users/users.component';
-import { Lesson1Component } from './courses/html/lesson1/lesson1.component';
-
+import { Lesson1Component } from './courses/template/lesson1/lesson1.component';
+import { NewcourseComponent } from './courses/newcourse/newcourse.component';
 
 const APP_ROUTES: Routes = [
   { path: 'profile', component: ProfileComponent },
@@ -32,6 +32,7 @@ const APP_ROUTES: Routes = [
   { path: 'courses/bootstrap', component: BootstrapComponent },
     { path: 'profile/users', component: UsersComponent },
         { path: 'courses/html/lesson1', component: Lesson1Component },
+        {path: 'courses/newcourse', component: NewcourseComponent}
 
 ];
 
