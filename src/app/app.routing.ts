@@ -18,10 +18,11 @@ import { Lesson1Component } from './courses/template/lesson1/lesson1.component';
 import { NewcourseComponent } from './courses/newcourse/newcourse.component';
 
 const APP_ROUTES: Routes = [
-  { path: 'profile', component: ProfileComponent },
   { path: '', component: HomeComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'profile/settings', component: SettingsComponent },
   { path: 'profile/progress', component: ProgressComponent },
+  { path: 'profile/users', component: UsersComponent },
   { path: 'courses/html', component: HtmlComponent },
   { path: 'courses/css', component: CssComponent },
   { path: 'courses/jquery', component: JqueryComponent },
@@ -30,9 +31,9 @@ const APP_ROUTES: Routes = [
   { path: 'courses/angularjs', component: AngularjsComponent },
   { path: 'courses/emberjs', component: EmberjsComponent },
   { path: 'courses/bootstrap', component: BootstrapComponent },
-    { path: 'profile/users', component: UsersComponent },
-        { path: 'courses/html/lesson1', component: Lesson1Component },
-        {path: 'courses/newcourse', component: NewcourseComponent}
+  { path: 'courses/html/lesson1', component: Lesson1Component },
+  { path: 'courses/newcourse', component: NewcourseComponent },
+  { path: '**', component: NewcourseComponent }
 
 ];
 
