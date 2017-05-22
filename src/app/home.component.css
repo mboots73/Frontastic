@@ -17,3 +17,13 @@ margin-right: auto;
   text-align: center;
   top: 1200px;
 }
+
+span {
+  background-color: #F7B733;
+  color:#DFDCE3;
+  border-radius: 50%;
+  padding: 1px;
+  width: 10px;
+  height: 10px;
+  box-shadow: none;
+}
