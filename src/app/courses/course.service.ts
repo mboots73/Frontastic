@@ -13,11 +13,16 @@ export class CourseService {
     new Course('Three.js', 'A JavaScript 3D library', '/assets/threejs.png', '/courses/threejs', '0'),
     new Course('Ember.js', 'A JavaScript MVVM framework', '/assets/Emberjs.png', '/courses/emberjs',  '0'),
     new Course('Bootstrap', 'A framework with HTML/CSS templates', '/assets/bootstrap.png', '/courses/bootstrap',  '0'),
-    new Course('Add a new course', ' ', '/assets/newcourse.png', '/courses/newcourse', '0')
+    // new Course('Add a new course', ' ', '/assets/newcourse.png', '/courses/newcourse', '0')
   ];
   constructor() { }
 
   getCourses() {
     return this.courses;
+  }
+  addCourse(courses) {
+
+  this.courses.push(courses)
+  console.log(courses)
   }
 }

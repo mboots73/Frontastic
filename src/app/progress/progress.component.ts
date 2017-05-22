@@ -9,7 +9,7 @@ import { CourseService } from '../courses/course.service';
 })
 export class ProgressComponent implements OnInit {
 
-  courses = [ {name: 'HTML', progress: '1000'},
+  courses = [ {name: 'HTML', progress: '100'},
   {name: 'CSS', progress: '50'},
   {name: 'JavaScript', progress: '0'},
     {name: 'jQuery', progress: '0'}

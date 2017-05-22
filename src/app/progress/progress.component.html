@@ -8,20 +8,20 @@
 <ul>
   <li>
     <h2>Introduction</h2>
-    <template ngFor [ngForOf]="courses" let-course>
+    <ng-template ngFor [ngForOf]="courses" let-course>
 
           <p style="width:80%" data-value="80">{{course['name']}}</p>
-          <progress max="100" value="{{course['progress']}}" ></progress> </template>
+          <progress max="100" value="{{course['progress']}}" ></progress> </ng-template>
 
   </li>
 
   <li id="frameworks">
     <h2>Frameworks</h2>
 
-    <template ngFor [ngForOf]="icourses" let-icourse>
+    <ng-template ngFor [ngForOf]="icourses" let-icourse>
 
           <p style="width:80%" data-value="80">{{icourse['name']}}</p>
-          <progress max="100" value="{{icourse['progress']}}" ></progress> </template>
+          <progress max="100" value="{{icourse['progress']}}" ></progress> </ng-template>
 
   </li>
 </ul>
