@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
   addCourse(input) {
     const newCourse = new Course(input, 'This course is about: ' + input, '/assets/'+input+'.png','/courses/'+input, '0');
     this.courseService.addCourse(newCourse);
-    console.log(this.courseService.getCourses().length)
+    console.log(input)
+
   }
 }

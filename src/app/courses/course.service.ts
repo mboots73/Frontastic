@@ -20,9 +20,10 @@ export class CourseService {
   getCourses() {
     return this.courses;
   }
-  addCourse(courses) {
-
-  this.courses.push(courses)
-  console.log(courses)
+  addCourse(hoi) {
+  this.courses.push(hoi);
+  console.log(hoi + 'from course')
+  hoi = '';
+  console.log(hoi + 'from course')
   }
 }

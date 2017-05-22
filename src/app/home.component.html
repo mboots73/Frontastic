@@ -6,9 +6,16 @@
 <br />
 
 <course-courses></course-courses>
-<div>
-        <input [(ngModel)]="input">
-        <span type="submit" (click)="addCourse(input)">Add</span>
+<div  class = "list-group-item-clearfix" >
+  <span>
+      <img class = "img-responsive"
+                  src = "/assets/newcourse.png"
+          style = "..."
+        />
+
+  </span>
+        <input [(ngModel)]="input" placeholder = "Which course do you want to add?" >
+        <button (click)="addCourse(input)" type="submit">Add</button>
     </div>
 
 <div class="footer">
