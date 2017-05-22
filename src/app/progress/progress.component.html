@@ -8,35 +8,20 @@
 <ul>
   <li>
     <h2>Introduction</h2>
+    <template ngFor [ngForOf]="courses" let-course>
 
-    <p style="width:80%" data-value="80">HTML</p>
-    <progress max="100" value="{{course.progress}}" ></progress>
-
-    <p style="width:60%" data-value="60">CSS</p>
-    <progress max="100" value="0" ></progress>
-
-    <p style="width:60%" data-value="60">JavaScript</p>
-    <progress max="100" value="0" ></progress>
-
-    <p style="width:60%" data-value="60">jQuery</p>
-    <progress max="100" value="0" ></progress>
+          <p style="width:80%" data-value="80">{{course['name']}}</p>
+          <progress max="100" value="{{course['progress']}}" ></progress> </template>
 
   </li>
 
   <li id="frameworks">
     <h2>Frameworks</h2>
 
-    <p style="width:60%" data-value="60">Angular.js</p>
-    <progress max="100" value="0" ></progress>
+    <template ngFor [ngForOf]="icourses" let-icourse>
 
-    <p style="width:60%" data-value="60">Three.js</p>
-    <progress max="100" value="0" ></progress>
-
-    <p style="width:60%" data-value="60">Ember.js</p>
-    <progress max="100" value="0" ></progress>
-
-    <p style="width:60%" data-value="60">Bootstrap</p>
-    <progress max="100" value="0" ></progress>
+          <p style="width:80%" data-value="80">{{icourse['name']}}</p>
+          <progress max="100" value="{{icourse['progress']}}" ></progress> </template>
 
   </li>
 </ul>
