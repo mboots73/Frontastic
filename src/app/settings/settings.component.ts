@@ -21,6 +21,7 @@ export class SettingsComponent implements OnInit {
   }
   onSubmit(form: NgForm) {
     console.log(this.user);
+    console.log(form.valid)
   }
 
 }

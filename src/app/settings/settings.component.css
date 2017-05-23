@@ -51,7 +51,11 @@ width: 360px;
 }
 
 button:hover {
-  cursor: hand;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }
 
 form .ng-invalid {
