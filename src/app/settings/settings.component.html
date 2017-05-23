@@ -43,7 +43,9 @@
         [(ngModel)]="user.profilepicture"
         name="profilepicture"
         size="40"
-        value = "user.profilepicture">
+        (change) = "changeListener($event)"
+        id="profile-img">
+        <img src="" id ="profile-img-tag" width="200x" />
         <button type="submit"
         [disabled]="!f.valid">Update your profile</button>
       </form>

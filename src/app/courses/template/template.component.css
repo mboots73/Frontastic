@@ -108,6 +108,7 @@ div tabs tab ul li a, div tabs tab ul li span{
 
 div tabs tab ul li :hover {
   color: #FC4A1A;
+  cursor: pointer;
 }
 
 div tabs tab p {

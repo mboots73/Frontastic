@@ -7,7 +7,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
-  user =  {
+public fileString;
+public  user =  {
     name: '',
     email: '',
     username: '',
@@ -15,12 +16,27 @@ export class SettingsComponent implements OnInit {
     profilepicture: ''
   };
 
-  constructor() { }
+  constructor() {   this.fileString;}
 
   ngOnInit() {
   }
   onSubmit(form: NgForm) {
     console.log(this.user);
+    console.log(form.valid)
+  }
+  changeListener($event):void {
+    this.readThis($event.target);
+  }
+  readThis(inputValue:any):void {
+    var file:File = inputValue.files[0];
+    var myReader: FileReader = new FileReader();
+    var fileType = inputValue.parentElement.id;
+    myReader.onloadend = (e) => {
+
+        console.log(document.getElementById('profile-img-tag').setAttribute('src', myReader.result));
+
+    }
+    myReader.readAsDataURL(inputValue.files[0]);
   }
 
 }

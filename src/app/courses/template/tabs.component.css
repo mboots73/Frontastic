@@ -15,4 +15,5 @@ ul li a {
 
 ul li :hover {
     color: #FC4A1A;
+    cursor: pointer;
 }
