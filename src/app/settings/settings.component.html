@@ -4,3 +4,53 @@
 <br />
 
 <h1>Settings</h1>
+<div class="container">
+  <div class="right_pane">
+    <div class="inputs">
+
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <span>Name:</span>
+        <input type="text"
+        [(ngModel)]="user.name"
+        name="name"
+        placeholder="Name"
+        required>
+        <span>Email:</span>
+        <input type="text"
+        [(ngModel)]="user.email"
+        name="email"
+        placeholder="yourname@example.com"
+        required
+        pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+        #email =  "ngModel">
+        <div *ngIf="!email.valid">
+          Invalid e-mail
+        </div>
+        <span>Username:</span>
+        <input type="text"
+        [(ngModel)]="user.username"
+        name="username"
+        placeholder="Username"
+        required>
+        <span>Password:</span>
+        <input type="password"
+        [(ngModel)]="user.password"
+        name="password"
+        placeholder="Password"
+        required>
+        <span>Change your profile picture:</span>
+        <input type="file"
+        [(ngModel)]="user.profilepicture"
+        name="profilepicture"
+        size="40"
+        value = "user.profilepicture">
+        <button type="submit"
+        [disabled]="!f.valid">Update your profile</button>
+      </form>
+    </div>
+
+  </div>
+
+
+
+</div>

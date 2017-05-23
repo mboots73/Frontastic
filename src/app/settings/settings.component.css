@@ -7,3 +7,54 @@
     color: #DFDCE3;
     margin-top: 25px;
   }
+
+
+.right_pane {
+background-color: #DFDCE3;
+padding: 450px 55px;
+width: 35%;
+
+}
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 18px;
+  margin-top: 40px;
+}
+input {
+    margin-bottom: 9px;
+    display: block;
+    box-sizing: border-box;
+    height: 35px;
+    width: 360px;
+    border: 0px transparent;
+    background-color: #DFDCE3;
+}
+span, input, label, button {
+  font-weight: normal;
+  font-size: 18px;
+  font-family: Cambria, serif;
+}
+
+.inputs {
+  margin-top: -350px;
+  margin-left: 90px;
+}
+
+button {
+border: solid 1px #FC4A1A;
+background-color: #FC4A1A;
+color: #DFDCE3;
+border-radius: 10px;
+width: 360px;
+}
+
+button:hover {
+  cursor: hand;
+}
+
+form .ng-invalid {
+  border: 0px transparent;
+  border-bottom: solid 2px #FC4A1A;
+}
