@@ -23,12 +23,7 @@ export class TemplateComponent implements OnInit {
   ngOnInit() {
   }
   progressImage() {
-
-   var progressImage = document.getElementById('myImage');
-   localStorage.setItem('progressImage', this.progressUrl);
-   console.log(progressImage);
-   this.urlName = localStorage.getItem('progressImage');
-   console.log(this.urlName);
+  document.getElementById('myImage').setAttribute('src', this.progressUrl);
 
   }
   finishedImage() {
