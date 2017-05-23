@@ -19,11 +19,13 @@ margin-right: auto;
 }
 input {
 display: block;
-margin-top: 57px;
+margin-top: 17px;
+margin-bottom: 20px;
 margin-left: auto;
 margin-right: auto;
   width: 248px;
-  height: 12px;
+  height: 23px;
+  color:black;
   background-color:#DFDCE3;
   border: 1px solid #d3d0d6;
   text-align: center;
@@ -78,4 +80,15 @@ button {
   border: solid 0.001em  #DFDCE3;
   background-color: #DFDCE3;
   opacity: 0.6;
+}
+
+img[src="Error.src"] {
+  display: none;
+}
+
+img {
+  width: 30px;
+}
+form {
+  margin-top: 20px;
 }

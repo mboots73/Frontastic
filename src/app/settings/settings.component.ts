@@ -32,8 +32,8 @@ public  user =  {
     var myReader: FileReader = new FileReader();
     var fileType = inputValue.parentElement.id;
     myReader.onloadend = (e) => {
-
-        console.log(document.getElementById('profile-img-tag').setAttribute('src', myReader.result));
+        this.user.profilepicture = myReader.result;
+        document.getElementById('profile-img-tag').setAttribute('src', myReader.result);
 
     }
     myReader.readAsDataURL(inputValue.files[0]);
