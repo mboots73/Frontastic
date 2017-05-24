@@ -6,8 +6,10 @@
 
 <h1> Users </h1>
 <br />
-<ul>
-  <li>Marjolein (active) </li>
-  <li>Iris (active)</li>
-  <li> </li>
-</ul>
+<h1>
+ <ul>
+   <li *ngFor="let profile of profiles | async">
+     {{profile.$value}}
+   </li>
+ </ul>
+</h1>
