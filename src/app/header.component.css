@@ -165,14 +165,19 @@ header nav ul li a:hover {
   color: #DFDCE3;
 }
 
-header img {
+img {
   position: absolute;
-  left: 88.5%;
-  width: auto;
-  height: 97%;
+  left: 6%;
+  top: 12%;
+  width: 85%;
+
 }
 
 header nav ul #profile {
   position: absolute;
   left: 92%;
+}
+
+#course_hidden {
+  color: #F7B733;
 }
