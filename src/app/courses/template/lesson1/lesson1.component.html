@@ -13,12 +13,12 @@
       <ul *ngFor="let question of questions">
         <p class="question">{{ question.questionText }}</p>
         <ul class="answer" *ngFor="let answer of question.answers">
-          <input type="radio" >{{ answer.answerText }}
+          <input type="radio" value = "{{answer.answerText }}"> {{ answer.answerText }}
         </ul>
       </ul>
 
     </ul>
-    <button class="btn" type="submit">Submit</button>
+    <button class="btn" type="submit" (click) ="showResult()">Submit</button>
     <div class="well">
       <p>You got .. {{ correctCount }} out of {{questions.length}} right!</p>
     </div>
