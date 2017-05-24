@@ -14,8 +14,20 @@
         />
 
   </span>
-        <input [(ngModel)]="input" placeholder = "What course do you want to add?" >
-        <button (click)="addCourse(input)" type="submit">Add</button>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <input type = "text"
+        [(ngModel)]="newcourse.input"
+        placeholder = "What course do you want to add?"
+        name = "input" >
+        <input type="file"
+        [(ngModel)]="newcourse.coursepicture"
+        name="coursepicture"
+        size="30"
+        (change) = "changeListener($event)">
+        <img src="Error.src" id ="profile-img-tag" width="150px"/>
+        <button (click)="addCourse(newcourse.input, newcourse.coursepicture)" type="submit"
+        [disabled]="!f.valid">Add this course</button>
+          </form>
     </div>
 
 <div class="footer">
