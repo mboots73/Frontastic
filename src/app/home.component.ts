@@ -22,7 +22,6 @@ public  newcourse =  {
     const newCourse = new Course(input, 'This course is about: ' + input, coursepicture,'/courses/'+input, '0');
     this.courseService.addCourse(newCourse);
     console.log(input)
-
   }
   onSubmit(form: NgForm) {
     console.log(form.valid)
