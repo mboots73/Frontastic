@@ -5,7 +5,7 @@
 
 .learn_pane, .editor_pane, .preview_pane {
   width: 30%;
-  height: 560px;
+  height: 600px;
   border: solid 1.5px #FC4A1A ;
   border-radius: 10px;
   margin-top: 3%;
@@ -17,4 +17,13 @@ font-size: 16px;
 margin-top: 30px;
 color: #DFDCE3;
 text-align: center;
+}
+
+.questions {
+  margin-left: -45px;
+
+}
+
+.answer {
+  color:#DFDCE3;
 }
