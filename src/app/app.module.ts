@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -29,7 +28,9 @@ import { Lesson1Component } from './courses/template/lesson1/lesson1.component';
 import { TemplateComponent } from './courses/template/template.component';
 import { NewcourseComponent } from './courses/newcourse/newcourse.component';
 
-
+import { AngularFireModule} from 'angularfire2';
+import { AngularFireDatabaseModule} from 'angularfire2/database';
+import { firebaseConfig } from './../environments/firebase.config';
 
 
 @NgModule({
@@ -57,15 +58,14 @@ import { NewcourseComponent } from './courses/newcourse/newcourse.component';
     Lesson1Component,
     TemplateComponent,
     NewcourseComponent,
-
-
-
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [ CourseService ],
   bootstrap: [AppComponent],

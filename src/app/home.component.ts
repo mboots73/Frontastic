@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CourseService } from './courses/course.service';
 import {Course } from './courses/course';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
 @Component({
   selector: 'app-home',
@@ -17,6 +18,5 @@ export class HomeComponent implements OnInit {
     const newCourse = new Course(input, 'This course is about: ' + input, '/assets/'+input+'.png','/courses/'+input, '0');
     this.courseService.addCourse(newCourse);
     console.log(input)
-
   }
 }
