@@ -2,6 +2,11 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Course } from '../course';
 import {TabsComponent} from './tabs.component';
 import {TabComponent} from './tab.component';
+import { AngularFireModule } from  'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabase} from  'angularfire2/database';
+import { FirebaseListObservable } from 'angularfire2/database';
+import * as functions from 'firebase-functions'
 
 @Component({
   selector: 'app-template',
@@ -18,7 +23,17 @@ export class TemplateComponent implements OnInit {
   @Input() urlLesson1: string;
   @Input() progressUrl: string;
   @Input() finishedUrl: string;
-  constructor() { }
+  html:string;
+  htmlname:string;
+
+  courses: FirebaseListObservable<any[]>;
+  constructor(private af: AngularFireDatabase) {
+    const courses: FirebaseListObservable<any> = af.list('courses');
+    const course = af.object('courses/html');
+      course.subscribe(console.log);
+    
+  }
+
 
   ngOnInit() {
   }
