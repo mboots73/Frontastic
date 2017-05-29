@@ -1,0 +1,10 @@
+<div class="form-container">
+  <img src = "assets/lock.png" id = "lock" />
+
+    <span class = "error" *ngIf="error"> {{error}}</span>
+
+    <button (click)="loginGoogle()"> Login with Google</button>
+      <button (click)="logout()"> Logout</button>
+
+
+</div>
