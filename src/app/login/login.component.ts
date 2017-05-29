@@ -15,6 +15,7 @@ import * as firebase from 'firebase/app';
 })
 export class LoginComponent implements OnInit {
   user: Observable<firebase.User>;
+  name:any;
   constructor(public afAuth: AngularFireAuth, private router: Router) {
       this.user = afAuth.authState;
 
@@ -26,6 +27,9 @@ loginGoogle() {
       this.router.navigateByUrl('/profile');
     }
   });
+  
+
+
 }
 logout() {
   this.afAuth.auth.signOut();
