@@ -1,0 +1,28 @@
+.container {
+display: block;
+margin-left:auto;
+margin-right: auto;
+width: 178px;
+margin-top: 20%;
+}
+
+img {
+  width:60px;
+  display: block;
+  margin-left:70px;
+  margin-right: auto;
+
+}
+
+button {
+  background:#FC4A1A;
+    color:#DFDCE3;
+    border-color: #FC4A1A;
+    padding: 1.2em;
+    width:200px;
+    text-align:center;
+    font-size:15px;
+    font-family: Cambria, sans-serif;
+    cursor:pointer;
+    margin-bottom: 20px;
+}
