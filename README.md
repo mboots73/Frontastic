@@ -1,6 +1,9 @@
-# FLEApp
+Project by Marjolein Boots and Iris Kuiters. 
+
+# Frontastic e-learning app
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
+If you want to start developing it further or want to use it in any other way, please install the packages in the package.json file.  
 
 ## Development server
 
