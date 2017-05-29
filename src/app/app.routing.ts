@@ -16,9 +16,11 @@ import { BootstrapComponent } from './courses/bootstrap/bootstrap.component';
 import { UsersComponent } from './users/users.component';
 import { Lesson1Component } from './courses/template/lesson1/lesson1.component';
 import { NewcourseComponent } from './courses/newcourse/newcourse.component';
+import { LoginComponent } from './login/login.component';
 
 const APP_ROUTES: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LoginComponent },
+  { path: 'courses', component: HomeComponent},
   { path: 'profile', component: ProfileComponent },
   { path: 'profile/settings', component: SettingsComponent },
   { path: 'profile/progress', component: ProgressComponent },

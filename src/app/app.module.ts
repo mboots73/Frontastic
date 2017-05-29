@@ -27,10 +27,12 @@ import { UsersComponent } from './users/users.component';
 import { Lesson1Component } from './courses/template/lesson1/lesson1.component';
 import { TemplateComponent } from './courses/template/template.component';
 import { NewcourseComponent } from './courses/newcourse/newcourse.component';
-
+import { LoginComponent } from './login/login.component';
 import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule} from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from './../environments/firebase.config';
+
 
 
 @NgModule({
@@ -58,6 +60,7 @@ import { firebaseConfig } from './../environments/firebase.config';
     Lesson1Component,
     TemplateComponent,
     NewcourseComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -65,7 +68,8 @@ import { firebaseConfig } from './../environments/firebase.config';
     HttpModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [ CourseService ],
   bootstrap: [AppComponent],
