@@ -14,12 +14,13 @@ export class AuthguardService implements CanActivate {
   constructor(private afAuth: AngularFireAuth, private router: Router) { }
 
   canActivate():Observable<boolean> {
+    // console.log("Authguard is called ");
     return this.afAuth.authState
     .take(1)
     .map(authState => !authState)
     .do(authenticated => {
       if
-      (!authenticated) this.router.navigateByUrl('/');
+      (!authenticated) this.router.navigateByUrl('');
     })
   }
 }
