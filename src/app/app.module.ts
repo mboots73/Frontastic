@@ -33,7 +33,7 @@ import { AngularFireDatabaseModule} from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from './../environments/firebase.config';
 import { AuthguardService } from './authguard.service';
-import { webStorageModule } from 'angular-webstorage-master';
+//import { webStorageModule } from 'angular-webstorage-master';
 
 @NgModule({
   declarations: [
@@ -61,7 +61,7 @@ import { webStorageModule } from 'angular-webstorage-master';
     TemplateComponent,
     NewcourseComponent,
     LoginComponent,
-    webStorageModule,
+    //webStorageModule,
   ],
   imports: [
     BrowserModule,
