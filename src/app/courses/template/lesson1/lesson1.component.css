@@ -48,3 +48,11 @@ button {
 button:hover {
   cursor: pointer;
 }
+
+.isCorrect_true{
+  background-color: green;
+}
+
+.isCorrect_false{
+  background-color: red;
+}

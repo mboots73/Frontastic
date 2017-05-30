@@ -10,17 +10,17 @@
 
 
     <ul class= "questions">
-      <ul *ngFor="let question of questions">
-        <p class="question">{{ question.questionText }}</p>
-        <ul class="answer" *ngFor="let answer of question.answers">
-          <input type="radio" value = "{{answer.answerText }}"> {{ answer.answerText }}
+      <ul *ngFor="let question of questions; let qi = index" >
+        <p class="question_{{qi}}">{{ question.questionText }}</p>
+        <ul class="answer" *ngFor="let answer of question.answers; let ai = index">
+        <label class = "isCorrect_{{answer.selected}}">  <input  ngModel="answers[{{ai}}]" type="radio" value = "{{answer.answerText}}" name = "question_{{qi}}_answer"> {{ answer.answerText }}</label>
         </ul>
       </ul>
 
     </ul>
     <button class="btn" type="submit" (click) ="showResult()">Submit</button>
     <div class="well">
-      <p>You got .. {{ correctCount }} out of {{questions.length}} right!</p>
+      <p>You got {{correctCount}} out of {{questions.length}} right!</p>
     </div>
 
   </div>
