@@ -1,4 +1,4 @@
-import {Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -17,25 +17,26 @@ import { UsersComponent } from './users/users.component';
 import { Lesson1Component } from './courses/template/lesson1/lesson1.component';
 import { NewcourseComponent } from './courses/newcourse/newcourse.component';
 import { LoginComponent } from './login/login.component';
+import { AuthguardService } from './authguard.service';
 
 const APP_ROUTES: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'courses', component: HomeComponent},
+  { path: 'courses', component: HomeComponent}, //canActivate: [AuthguardService] },
   { path: 'profile', component: ProfileComponent },
-  { path: 'profile/settings', component: SettingsComponent },
-  { path: 'profile/progress', component: ProgressComponent },
-  { path: 'profile/users', component: UsersComponent },
-  { path: 'courses/html', component: HtmlComponent },
-  { path: 'courses/css', component: CssComponent },
-  { path: 'courses/jquery', component: JqueryComponent },
-  { path: 'courses/javascript', component: JavascriptComponent },
-  { path: 'courses/threejs', component: ThreejsComponent },
-  { path: 'courses/angularjs', component: AngularjsComponent },
-  { path: 'courses/emberjs', component: EmberjsComponent },
-  { path: 'courses/bootstrap', component: BootstrapComponent },
-  { path: 'courses/html/lesson1', component: Lesson1Component },
-  { path: 'courses/newcourse', component: NewcourseComponent },
-  { path: '**', component: NewcourseComponent }
+  { path: 'profile/settings', component: SettingsComponent}, //canActivate: [AuthguardService] },
+  { path: 'profile/progress', component: ProgressComponent},//canActivate: [AuthguardService] },
+  { path: 'profile/users', component: UsersComponent},//canActivate: [AuthguardService] },
+  { path: 'courses/html', component: HtmlComponent},//canActivate: [AuthguardService] },
+  { path: 'courses/css', component: CssComponent},//canActivate: [AuthguardService] },
+  { path: 'courses/jquery', component: JqueryComponent},//canActivate: [AuthguardService] },
+  { path: 'courses/javascript', component: JavascriptComponent},//canActivate: [AuthguardService] },
+  { path: 'courses/threejs', component: ThreejsComponent},//canActivate: [AuthguardService] },
+  { path: 'courses/angularjs', component: AngularjsComponent},//canActivate: [AuthguardService] },
+  { path: 'courses/emberjs', component: EmberjsComponent},//canActivate: [AuthguardService] },
+  { path: 'courses/bootstrap', component: BootstrapComponent},//canActivate: [AuthguardService] },
+  { path: 'courses/html/lesson1', component: Lesson1Component},//canActivate: [AuthguardService] },
+  { path: 'courses/newcourse', component: NewcourseComponent},//canActivate: [AuthguardService] },
+  { path: '**', component: NewcourseComponent}//canActivate: [AuthguardService] }
 
 ];
 
