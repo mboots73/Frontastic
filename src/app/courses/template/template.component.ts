@@ -20,6 +20,7 @@ export class TemplateComponent implements OnInit {
   @Input() description: string;
   @Input() lesson1: string;
   @Input() lesson2: string;
+  @Input() lesson3: string;
   @Input() urlLesson1: string;
   @Input() progressUrl: string;
   @Input() finishedUrl: string;
@@ -31,7 +32,7 @@ export class TemplateComponent implements OnInit {
     const courses: FirebaseListObservable<any> = af.list('courses');
     const course = af.object('courses/html');
       course.subscribe(console.log);
-    
+
   }
 
 
