@@ -32,7 +32,7 @@ import { AngularFireModule} from 'angularfire2';
 import { AngularFireDatabaseModule} from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from './../environments/firebase.config';
-
+import { webStorageModule } from 'angular-webstorage-master';
 
 
 @NgModule({
@@ -69,10 +69,12 @@ import { firebaseConfig } from './../environments/firebase.config';
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    webStorageModule
   ],
   providers: [ CourseService ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
+
 export class AppModule { }
