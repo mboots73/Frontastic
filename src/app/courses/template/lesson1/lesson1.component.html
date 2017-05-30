@@ -10,16 +10,15 @@
 
 
     <ul class= "questions">
-      <ul *ngFor="let question of questions">
+      <ul *ngFor="let question of questions; let i = index" >
         <p class="question">{{ question.questionText }}</p>
         <ul class="answer" *ngFor="let answer of question.answers">
-          <input type="radio" value = "{{answer.answerText }}"> {{ answer.answerText }}
+          <input type="radio" value = "{{answer.answerText }}" name = "question_{{i}}_answer"> {{ answer.answerText }}
         </ul>
       </ul>
 
     </ul>
-    <!-- <button class="btn" type="submit" (click) ="showResult()">Submit</button> -->
-        <button class="btn" type="submit" >Submit</button>
+    <button class="btn" type="submit" (click) ="showResult()">Submit</button>
     <div class="well">
       <p>You got .. out of {{questions.length}} right!</p>
     </div>
