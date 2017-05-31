@@ -34,6 +34,7 @@ export class Lesson1Component implements OnInit {
             this.answers[j].selected = "false";
         }
       }
+
     }
   }
   questions = [

@@ -13,12 +13,12 @@
       <ul *ngFor="let question of questions; let qi = index" >
         <p class="question_{{qi}}">{{ question.questionText }}</p>
         <ul class="answer" *ngFor="let answer of question.answers; let ai = index">
-        <label class = "isCorrect_{{answer.selected}}">  <input  ngModel="answers[{{ai}}]" type="radio" value = "{{answer.answerText}}" name = "question_{{qi}}_answer"> {{ answer.answerText }}</label>
+        <label class = "isCorrect_{{answer.selected}}">  <input id = "question_{{qi}}_answer_{{ai}}" ngModel="answers[{{ai}}]" type="radio" value = "{{answer.answerText}}" name = "question_{{qi}}_answer"> {{ answer.answerText }}</label>
         </ul>
       </ul>
 
     </ul>
-    <button class="btn" type="submit" (click) ="showResult()">Submit</button>
+    <button class="btn" type="submit"  (click)= "showResult()">Submit</button>
     <div class="well">
       <p>You got {{correctCount}} out of {{questions.length}} right!</p>
     </div>
