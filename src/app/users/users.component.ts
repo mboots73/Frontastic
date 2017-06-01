@@ -8,9 +8,6 @@ import { FirebaseService } from '../firebase.service';
 export class UsersComponent implements OnInit {
 
   profiles: any;
-  courses:any;
-  course:any;
-  html:any;
   constructor(private fs: FirebaseService) {
   }
 
@@ -18,6 +15,7 @@ export class UsersComponent implements OnInit {
     this.fs.getProfiles().subscribe(profiles => {
       this.profiles = profiles;
     });
+
   }
 
 }

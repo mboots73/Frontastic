@@ -43,10 +43,9 @@ export class FirebaseService {
     this.courses = this.afd.list('/courses') as FirebaseListObservable<any[]>
     return this.courses;
   }
-  getCourse(courseId: string) {
-    this.course = this.afd.list('/courses' + courseId) as FirebaseListObservable<Course[]>
-    return this.course;
-  }
+  addCourse(course) {
+   this.courses.push(course);
+   }
 
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
@@ -71,19 +70,4 @@ export class FirebaseService {
 
 interface Profile {
   id: string;
-}
-
-interface Course {
-  name: string;
-  progress: string;
-  webpageurl: string;
-  category: string;
-  description?: string;
-  imageurl: string;
-  imageurldone: string;
-  imageurlprogress: string;
-  lesson1: string;
-  lesson2?: string;
-  lesson1url: string;
-
 }

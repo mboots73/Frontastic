@@ -12,7 +12,6 @@ import { ProgressComponent } from './progress/progress.component';
 import { CoursesComponent } from './courses/courses.component';
 import { CourseListComponent } from './courses/course-list/course-list.component';
 import { CourseItemComponent } from './courses/course-list/course-item.component';
-import { CourseService } from './courses/course.service';
 import { HtmlComponent } from './courses/html/html.component';
 import { CssComponent } from './courses/css/css.component';
 import { JavascriptComponent } from './courses/javascript/javascript.component';
@@ -74,7 +73,7 @@ import { FirebaseService } from './firebase.service';
     AngularFireAuthModule
     ],
 
-  providers: [ CourseService, AuthguardService, FirebaseService ],
+  providers: [ AuthguardService, FirebaseService ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

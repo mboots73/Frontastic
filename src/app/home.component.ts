@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CourseService } from './courses/course.service';
+import { FirebaseService } from './firebase.service';
 import {Course } from './courses/course';
 import { NgForm } from '@angular/forms';
 
@@ -14,13 +14,14 @@ public  newcourse =  {
     input: '',
     coursepicture: ''
   };
-  constructor(private courseService: CourseService) { }
+  constructor(private fs: FirebaseService) { }
 
   ngOnInit() {
   }
   addCourse(input, coursepicture) {
-    const newCourse = new Course(input, 'This course is about: ' + input, coursepicture,'/courses/'+input, '0');
-    this.courseService.addCourse(newCourse);
+    const newCourse = new Course('category', 'This course is about: ' + input, 'explanation', coursepicture,
+    'done.png', 'progress.png','lesson1', '/courses/'+input+'/lesson1','lesson2',input, '0', '/courses/'+input);
+    this.fs.addCourse(newCourse);
     console.log(input)
   }
   onSubmit(form: NgForm) {
