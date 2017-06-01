@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth,  AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable} from  'angularfire2/database';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
-import { AngularFireModule } from 'angularfire2';
-import * as firebase from 'firebase/app';
+import { FirebaseService } from './firebase.service';
 @Component({
   selector: 'app-headercomponent',
   templateUrl: './header.component.html',
@@ -12,17 +7,14 @@ import * as firebase from 'firebase/app';
 })
 export class HeaderComponent implements OnInit {
 
-  user: Observable<firebase.User>;
-  constructor(public afAuth: AngularFireAuth, private router: Router) {
-      this.user = afAuth.authState;
+  constructor(private fs: FirebaseService) {
 
 }
 
   ngOnInit() {
   }
   logout() {
-    this.afAuth.auth.signOut();
-    this.router.navigateByUrl('');
-  }
+      this.fs.logout();
+      }
 
 }

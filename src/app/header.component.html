@@ -9,16 +9,16 @@
         </a>
       </li>
       <li id="profile">
-        <a href="/profile" >
+        <a [routerLink]= "['/profile']" >
           <div>
             Profile
           </div>
         </a>
         <div>
           <ul>
-            <li><a href="/profile/progress">Progress</a></li>
-            <li><a href="/profile/settings">Settings</a></li>
-            <li><a href="/profile/users">Users</a></li>
+            <li><a [routerLink]= "['/profile/progress']">Progress</a></li>
+            <li><a [routerLink]= "['/profile/settings']">Settings</a></li>
+            <li><a [routerLink]= "['/profile/users']">Users</a></li>
             <li><a (click) = "logout()">Logout</a></li>
           </ul>
         </div>

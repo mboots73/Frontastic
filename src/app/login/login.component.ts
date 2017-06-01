@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth,  AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireAuth, AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable} from  'angularfire2/database';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { AngularFireModule } from 'angularfire2';
 import * as firebase from 'firebase/app';
 import { webStorageModule } from 'angular-webstorage-master';
+import { FirebaseService } from '../firebase.service';
 
 @Component({
   selector: 'app-login',
@@ -14,34 +15,19 @@ import { webStorageModule } from 'angular-webstorage-master';
 })
 
 export class LoginComponent implements OnInit {
-  user: Observable<firebase.User>;
-  name:any;
-  constructor(public afAuth: AngularFireAuth, private router: Router) {
-      this.user = afAuth.authState;
-}
 
+  constructor(private fs: FirebaseService) {
+
+  }
   loginGoogle() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-    this.afAuth.authState.subscribe(auth =>  {
-      if (auth) {
-        this.router.navigateByUrl('/profile');
-      }
-    });
+    this.fs.loginGoogle();
   }
-
-  session(){
+  session() {
     var frontastic = frontastic.module('frontastic', ['webStorageModule']);
-    frontastic.controller('myController', function ($scope, webStorage) { });
+    frontastic.controller('myController', function($scope, webStorage) { });
   }
-
-  logout() {
-    this.afAuth.auth.signOut();
-    this.router.navigateByUrl('');
-  }
-
-
-
   ngOnInit() {
+
   }
 
 }

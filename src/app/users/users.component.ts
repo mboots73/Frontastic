@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FirebaseListObservable } from 'angularfire2/database';
-import { AngularFireModule } from  'angularfire2';
-import { AngularFireAuthModule } from 'angularfire2/auth';
-import { AngularFireDatabase} from  'angularfire2/database';
+import { FirebaseService } from '../firebase.service';
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -10,13 +7,17 @@ import { AngularFireDatabase} from  'angularfire2/database';
 })
 export class UsersComponent implements OnInit {
 
-  profiles: FirebaseListObservable<any[]>;
-
-  constructor(private af: AngularFireDatabase) {
-  this.profiles = af.list('/profiles');
+  profiles: any;
+  courses:any;
+  course:any;
+  html:any;
+  constructor(private fs: FirebaseService) {
   }
 
   ngOnInit() {
+    this.fs.getProfiles().subscribe(profiles => {
+      this.profiles = profiles;
+    });
   }
 
 }
