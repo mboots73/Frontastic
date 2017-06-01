@@ -14,20 +14,6 @@ margin-top: 20%;
 
 }
 
-button {
-  background:#FC4A1A;
-    color:#DFDCE3;
-    border-color: #FC4A1A;
-    padding: 1.2em;
-    width:200px;
-    text-align:center;
-    font-size:15px;
-    font-family: Cambria, sans-serif;
-    cursor:pointer;
-    margin-bottom: 20px;
-}
-
-
 #google {
     width:230px;
     cursor:pointer;
