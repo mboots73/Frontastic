@@ -17,24 +17,28 @@ progress[value]::-webkit-progress-value {
   background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
-ul li {
-  float: left;
-  margin: 20px;
+ul {
+  list-style-type: none;
+  margin-left: -40px;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  column-gap: 20px;
+  -webkit-column-width: 100px;
+  -moz-column-width: 100px;
+  column-width: 100px;
+  padding: none;
 }
 
-ul h2 {
-    font-weight: normal;
-  font-size: 20px;
-  font-family: Cambria;
-  color: #DFDCE3
-}
-
-ul li {
-    font-weight: normal;
+p {
+  font-weight: normal;
   font-size: 15px;
-  letter-spacing: 0.05em;
-  font-family: Cambria;
-  color: #DFDCE3
+  font-family: Cambria, serif;
+  margin-left: 16px;
+  color: #DFDCE3;
+  width: 200px;
 }
 
 h1 {
@@ -43,5 +47,6 @@ h1 {
   font-family: Cambria, serif;
   margin-left: 16px;
   color: #DFDCE3;
-      margin-top: 25px;
+  margin-top: 25px;
+  margin-bottom: 10px;
 }
