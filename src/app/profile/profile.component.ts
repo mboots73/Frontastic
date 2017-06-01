@@ -14,6 +14,7 @@ import * as firebase from 'firebase/app';
 export class ProfileComponent implements OnInit {
   userName: string;
   userImage: any;
+  userEmail: string;
   user: Observable<firebase.User>;
   constructor(public afAuth: AngularFireAuth) {
     this.user = afAuth.authState;
@@ -21,7 +22,8 @@ export class ProfileComponent implements OnInit {
     this.afAuth.authState.subscribe(( user: firebase.User) => {
     this.userName = user.displayName;
     this.userImage = user.photoURL;
-    console.log(this.userImage);
+    this.userEmail = user.email;
+
   })
 };
 }

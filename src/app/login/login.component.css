@@ -6,10 +6,10 @@ width: 178px;
 margin-top: 20%;
 }
 
-img {
+#lock {
   width:60px;
   display: block;
-  margin-left:70px;
+  margin-left:85px;
   margin-right: auto;
 
 }
@@ -23,6 +23,13 @@ button {
     text-align:center;
     font-size:15px;
     font-family: Cambria, sans-serif;
+    cursor:pointer;
+    margin-bottom: 20px;
+}
+
+
+#google {
+    width:230px;
     cursor:pointer;
     margin-bottom: 20px;
 }
