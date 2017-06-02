@@ -24,6 +24,7 @@ public  newcourse =  {
     this.fs.addCourse(newCourse);
     console.log(input)
   }
+  
   onSubmit(form: NgForm) {
     console.log(form.valid)
     console.log(this.newcourse)
