@@ -46,6 +46,10 @@ export class FirebaseService {
   addCourse(course) {
    this.courses.push(course);
    }
+   //drops all courses
+  //  deleteCourse() {
+  //   this.course.remove();
+  //  }
 
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());

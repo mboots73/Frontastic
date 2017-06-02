@@ -24,6 +24,9 @@ public  newcourse =  {
     this.fs.addCourse(newCourse);
     console.log(input)
   }
+  deleteCourse() {
+    this.fs.deleteCourse();
+  }
   onSubmit(form: NgForm) {
     console.log(form.valid)
     console.log(this.newcourse)
