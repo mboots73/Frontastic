@@ -18,14 +18,14 @@ import { FirebaseService } from '../../firebase.service';
 export class TemplateComponent implements OnInit {
   @Input() name: string;
   @Input() category: string;
-  @Input() urlName: string;
+  @Input() imageurl: string;
   @Input() description: string;
   @Input() lesson1: string;
   @Input() lesson2: string;
   @Input() lesson3: string;
-  @Input() urlLesson1: string;
-  @Input() progressUrl: string;
-  @Input() finishedUrl: string;
+  @Input() lesson1url: string;
+  @Input() imageurlprogress: string;
+  @Input() imageurldone: string;
   constructor(private af: AngularFireDatabase) {
 
   }
@@ -36,11 +36,11 @@ export class TemplateComponent implements OnInit {
         }
 
   progressImage() {
-  document.getElementById('myImage').setAttribute('src', this.progressUrl);
+  document.getElementById('myImage').setAttribute('src', this.imageurlprogress);
 
   }
   finishedImage() {
-  document.getElementById('myImage').setAttribute('src', this.finishedUrl);
+  document.getElementById('myImage').setAttribute('src', this.imageurldone);
 
   }
 
