@@ -26,16 +26,16 @@ const APP_ROUTES: Routes = [
   { path: 'profile/settings', component: SettingsComponent, canActivate: [AuthguardService] },
   { path: 'profile/progress', component: ProgressComponent,canActivate: [AuthguardService] },
   { path: 'profile/users', component: UsersComponent,canActivate: [AuthguardService] },
-  { path: 'courses/html', component: HtmlComponent,canActivate: [AuthguardService] },
-  { path: 'courses/css', component: CssComponent,canActivate: [AuthguardService] },
-  { path: 'courses/jquery', component: JqueryComponent,canActivate: [AuthguardService] },
-  { path: 'courses/javascript', component: JavascriptComponent,canActivate: [AuthguardService] },
-  { path: 'courses/threejs', component: ThreejsComponent,canActivate: [AuthguardService] },
-  { path: 'courses/angularjs', component: AngularjsComponent,canActivate: [AuthguardService] },
-  { path: 'courses/emberjs', component: EmberjsComponent,canActivate: [AuthguardService] },
-  { path: 'courses/bootstrap', component: BootstrapComponent,canActivate: [AuthguardService] },
-  { path: 'courses/html/lesson1', component: Lesson1Component,canActivate: [AuthguardService] },
-  { path: 'courses/newcourse', component: NewcourseComponent,canActivate: [AuthguardService] },
+  { path: 'courses/html', component: HtmlComponent},//canActivate: [AuthguardService] }
+  { path: 'courses/css', component: CssComponent},//canActivate: [AuthguardService] }
+  { path: 'courses/jquery', component: JqueryComponent},//canActivate: [AuthguardService] }
+  { path: 'courses/javascript', component: JavascriptComponent},//canActivate: [AuthguardService] }
+  { path: 'courses/threejs', component: ThreejsComponent},//canActivate: [AuthguardService] }
+  { path: 'courses/angularjs', component: AngularjsComponent},//canActivate: [AuthguardService] }
+  { path: 'courses/emberjs', component: EmberjsComponent},//canActivate: [AuthguardService] }
+  { path: 'courses/bootstrap', component: BootstrapComponent},//canActivate: [AuthguardService] }
+  { path: 'courses/html/lesson1', component: Lesson1Component},//canActivate: [AuthguardService] }
+  { path: 'courses/newcourse', component: NewcourseComponent},//canActivate: [AuthguardService] },
   { path: '**', component: NewcourseComponent}//canActivate: [AuthguardService] }
 
 ];
