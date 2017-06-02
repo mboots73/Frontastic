@@ -9,6 +9,6 @@ export class NewcourseComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
 
-}
+  }
+  }

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Course } from '../course';
 
 
 @Component({
@@ -11,7 +10,6 @@ export class HtmlComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
 
-
+}
 }

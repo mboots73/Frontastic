@@ -9,6 +9,6 @@ export class AngularjsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
 
+}
 }

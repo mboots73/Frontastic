@@ -9,6 +9,6 @@ export class JavascriptComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
 
-}
+  }
+  }

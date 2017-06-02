@@ -9,6 +9,6 @@ export class JqueryComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
 
-}
+  }
+  }
