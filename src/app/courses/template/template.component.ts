@@ -32,16 +32,39 @@ export class TemplateComponent implements OnInit {
 
 
   ngOnInit() {
+    var name = this.name;
+    var storageRef = firebase.storage().ref();
+    var imagesRef = storageRef.child('images');
+    var emberRef = imagesRef.child(name + '.png');
+    var emberPath = emberRef.getDownloadURL().then(function(url) {
+      // var downLoadUrl = url;
+      var img = <HTMLInputElement>document.getElementById('myImage');
+      img.src = url;
+  })
+}
 
-        }
 
   progressImage() {
-  document.getElementById('myImage').setAttribute('src', this.imageurlprogress);
+    var name = this.name;
+    var storageRef = firebase.storage().ref();
+    var imagesRef = storageRef.child('images');
+    var imageRef = imagesRef.child(name + '-inprogress.png');
+    var imagePath = imageRef.getDownloadURL().then(function(url) {
+      var img = <HTMLInputElement>document.getElementById('myImage');
+      img.src = url;
+  })
 
   }
   finishedImage() {
-  document.getElementById('myImage').setAttribute('src', this.imageurldone);
+    var name = this.name;
+    var storageRef = firebase.storage().ref();
+    var imagesRef = storageRef.child('images');
+    var imageRef = imagesRef.child(name + '-done.png');
+    var imagePath = imageRef.getDownloadURL().then(function(url) {
+      var img = <HTMLInputElement>document.getElementById('myImage');
+      img.src = url;
 
-  }
+  })
 
+}
 }
