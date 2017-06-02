@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FirebaseService } from './firebase.service';
 import {Course } from './courses/course';
 import { NgForm } from '@angular/forms';
-
+import * as firebase from 'firebase';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -32,14 +32,18 @@ public  newcourse =  {
     this.readThis($event.target);
   }
   readThis(inputValue:any):void {
-    var file:File = inputValue.files[0];
-    var myReader: FileReader = new FileReader();
-    var fileType = inputValue.parentElement.id;
-    myReader.onloadend = (e) => {
-        console.log(this.newcourse.coursepicture = myReader.result);
-        // console.log(document.getElementById('profile-img-tag').setAttribute('src', myReader.result));
 
-    }
-    myReader.readAsDataURL(inputValue.files[0]);
+    var file:File = inputValue.files[0];
+    var storageRef = firebase.storage().ref('images/' + file.name);
+    var task = storageRef.put(file);
+     var myReader: FileReader = new FileReader();
+     var fileType = inputValue.parentElement.id;
+     myReader.onloadend = (e) => {
+        console.log(this.newcourse.coursepicture = myReader.result);
+    //console.log(document.getElementById('profile-img-tag').setAttribute('src', myReader.result));
+
+     }
+     myReader.readAsDataURL(inputValue.files[0]);
   }
+
 }

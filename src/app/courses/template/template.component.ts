@@ -7,6 +7,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabase} from  'angularfire2/database';
 import { FirebaseListObservable } from 'angularfire2/database';
 import * as functions from 'firebase-functions'
+import * as firebase from 'firebase';
+import { FirebaseService } from '../../firebase.service';
 
 @Component({
   selector: 'app-template',
@@ -24,20 +26,15 @@ export class TemplateComponent implements OnInit {
   @Input() urlLesson1: string;
   @Input() progressUrl: string;
   @Input() finishedUrl: string;
-  html:string;
-  htmlname:string;
-
-  courses: FirebaseListObservable<any[]>;
   constructor(private af: AngularFireDatabase) {
-    const courses: FirebaseListObservable<any> = af.list('courses');
-    const course = af.object('courses/html');
-      course.subscribe(console.log);
 
   }
 
 
   ngOnInit() {
-  }
+
+        }
+
   progressImage() {
   document.getElementById('myImage').setAttribute('src', this.progressUrl);
 
