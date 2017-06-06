@@ -20,21 +20,10 @@ export class UsersService {
   userName: string;
   userImage: any;
   userEmail: string;
-  Users = [];
+
   constructor(private afd: AngularFireDatabase, public afAuth: AngularFireAuth, private router: Router) {
   var usersRef = this.afd.list('/users');
-  var users = $firebaseArray(usersRef)
-
-  Users = {
-    getProfile: function(uid) {
-      return $firebaseObject(usersRef.child(uid));
-    }
-    getDisplayName: function(uid) {
-      return users.$getRecord(uid).displayName;
-    },
-    all:users
-  }
-  return this.Users;
+  console.log(usersRef);
 
   }
 }
