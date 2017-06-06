@@ -33,7 +33,6 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from './../environments/firebase.config';
 import { AuthguardService } from './authguard.service';
 import { FirebaseService } from './firebase.service';
-import { UsersService } from './users.service';
 //import { webStorageModule } from 'angular-webstorage-master';
 
 @NgModule({
@@ -74,7 +73,7 @@ import { UsersService } from './users.service';
     AngularFireAuthModule
     ],
 
-  providers: [ AuthguardService, FirebaseService, UsersService ],
+  providers: [ AuthguardService, FirebaseService ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

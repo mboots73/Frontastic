@@ -22,28 +22,28 @@ export class FirebaseService {
   userName: string;
   userImage: any;
   userEmail: string;
-  users: FirebaseListObservable<any[]>;
-  User:any;
+  users: any;
+  User: any;
+  usersRef: any;
+  currentUsers: any[];
 
   constructor(private afd: AngularFireDatabase, public afAuth: AngularFireAuth, private router: Router) {
     this.user = afAuth.authState;
+    // console.log(this.user);
     if (this.user !== null) {
       this.afAuth.authState.subscribe((user: firebase.User) => {
         this.userName = user.displayName;
         this.userImage = user.photoURL;
         this.userEmail = user.email;
         this.users = this.afd.list('/users');
-        this.users.push({username: this.userName, email: this.userEmail, role: 'admin'});
-
+        this.users.push({ username: this.userName, email: this.userEmail, role: 'admin' });
       });
 
-}
-
+    }
   }
 
-
   getUsers() {
-    this.profiles = this.afd.list('/users') as FirebaseListObservable<any[]>
+    this.users = this.afd.list('/users') as FirebaseListObservable<any[]>
     return this.users;
   }
   getCourses() {
@@ -51,9 +51,9 @@ export class FirebaseService {
     return this.courses;
   }
   addCourse(course) {
-   this.courses.push(course);
-   }
-   //drops all courses
+    this.courses.push(course);
+  }
+  //drops all courses
   //  deleteCourse() {
   //   this.course.remove();
   //  }
