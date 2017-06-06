@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../firebase.service';
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -7,13 +8,13 @@ import { FirebaseService } from '../firebase.service';
 })
 export class UsersComponent implements OnInit {
 
-  profiles: any;
+  users: any;
   constructor(private fs: FirebaseService) {
   }
 
   ngOnInit() {
-    this.fs.getProfiles().subscribe(profiles => {
-      this.profiles = profiles;
+    this.fs.getUsers().subscribe(users => {
+      this.users = users;
     });
 
   }

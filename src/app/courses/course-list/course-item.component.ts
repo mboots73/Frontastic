@@ -15,8 +15,8 @@ export class CourseItemComponent implements OnInit {
 
   ngOnInit() {
   }
-  deleteCourse() {
-    this.fs.deleteCourse();
-  }
+  // deleteCourse() {
+  //   this.fs.deleteCourse();
+  // }
 
 }
