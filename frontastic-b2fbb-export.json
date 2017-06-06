@@ -1,0 +1,89 @@
+{
+  "courses" : {
+    "Bootstrap" : {
+      "category" : "HTML/CSS templates",
+      "description" : "A framework with HTML/CSS templates",
+      "imageurl" : "/assets/bootstrap.png",
+      "lesson1" : "bootstraplesson1",
+      "lesson2" : "bootstraplesson2",
+      "name" : "Bootstrap",
+      "progress" : 0,
+      "webpageurl" : "/courses/bootstrap"
+    },
+    "Emberjs" : {
+      "category" : "MVVM framework",
+      "description" : "A JavaScript MVVM framework",
+      "imageurl" : "/assets/emberjs.png",
+      "lesson1" : "ej lesson1",
+      "lesson2" : "ej lesson2",
+      "name" : "Ember.js",
+      "progress" : 0,
+      "webpageurl" : "/courses/emberjs"
+    },
+    "Javascript" : {
+      "category" : "Interactive webpages",
+      "description" : "Language to make your webpages interactive",
+      "imageurl" : "/assets/javascript.png",
+      "lesson1" : "jslesson1",
+      "lesson2" : "jslesson2",
+      "name" : "JavaScript",
+      "progress" : 0,
+      "webpageurl" : "/courses/javascript"
+    },
+    "Threejs" : {
+      "category" : "3D library",
+      "description" : "A JavaScript 3D library",
+      "imageurl" : "/assets/threejs.png",
+      "lesson1" : "tjlesson1",
+      "lesson2" : "tjlesson2",
+      "name" : "Three.js",
+      "progress" : 0,
+      "webpageurl" : "/courses/threejs"
+    },
+    "Angularjs" : {
+      "category" : "JavaScript framework",
+      "description" : "A JavaScript MVC framework",
+      "imageurl" : "/assets/angularjs.png",
+      "lesson1" : "aj lesson1",
+      "lesson2" : "ajs lesson2",
+      "name" : "Angular.js",
+      "progress" : 0,
+      "webpageurl" : "/courses/angularjs"
+    },
+    "Css" : {
+      "category" : "Webdesign",
+      "description" : "Language to style web-pages",
+      "imageurl" : "/assets/css.png",
+      "lesson1" : "Basics",
+      "lesson2" : "Selectors",
+      "name" : "CSS",
+      "progress" : 0,
+      "webpageurl" : "/courses/css"
+    },
+    "Html" : {
+      "category" : "Webstructure",
+      "description" : "Language for creating web-pages",
+      "imageurl" : "/assets/html.png",
+      "lesson1" : "Structure",
+      "lesson1url" : "/courses/html/lesson1",
+      "lesson2" : "Elements",
+      "name" : "HTML",
+      "progress" : 50,
+      "webpageurl" : "/courses/html"
+    },
+    "JQuery" : {
+      "category" : "JavaScript library",
+      "description" : "A JavaScript library",
+      "imageurl" : "/assets/jquery.png",
+      "lesson1" : "jq lesson1",
+      "lesson2" : "jq lesson2",
+      "name" : "jQuery",
+      "progress" : 0,
+      "webpageurl" : "/courses/jquery"
+    }
+  },
+  "profiles" : {
+    "7" : "Marjolein",
+    "23" : "Iris"
+  }
+}

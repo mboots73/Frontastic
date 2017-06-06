@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Course } from '../course';
-
+import { FirebaseService } from '../../firebase.service';
 
 @Component({
   selector: 'course-item',
@@ -11,10 +11,12 @@ export class CourseItemComponent implements OnInit {
   @Input() course: Course;
   courseId: number;
 
-  constructor() { }
+  constructor(private fs: FirebaseService) { }
 
   ngOnInit() {
   }
-
+  // deleteCourse() {
+  //   this.fs.deleteCourse();
+  // }
 
 }

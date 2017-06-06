@@ -22,6 +22,8 @@ export class FirebaseService {
   userName: string;
   userImage: any;
   userEmail: string;
+  users: FirebaseListObservable<any[]>;
+  User:any;
 
   constructor(private afd: AngularFireDatabase, public afAuth: AngularFireAuth, private router: Router) {
     this.user = afAuth.authState;
@@ -30,14 +32,19 @@ export class FirebaseService {
         this.userName = user.displayName;
         this.userImage = user.photoURL;
         this.userEmail = user.email;
+        this.users = this.afd.list('/users');
+        this.users.push({username: this.userName, email: this.userEmail, role: 'admin'});
+
       });
+
 }
+
   }
 
 
-  getProfiles() {
-    this.profiles = this.afd.list('/profiles') as FirebaseListObservable<Profile[]>
-    return this.profiles;
+  getUsers() {
+    this.profiles = this.afd.list('/users') as FirebaseListObservable<any[]>
+    return this.users;
   }
   getCourses() {
     this.courses = this.afd.list('/courses') as FirebaseListObservable<any[]>
@@ -46,6 +53,10 @@ export class FirebaseService {
   addCourse(course) {
    this.courses.push(course);
    }
+   //drops all courses
+  //  deleteCourse() {
+  //   this.course.remove();
+  //  }
 
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
@@ -54,6 +65,7 @@ export class FirebaseService {
         this.router.navigateByUrl('/profile');
       }
     });
+
   }
 
   session() {
@@ -66,8 +78,4 @@ export class FirebaseService {
     this.router.navigateByUrl('');
   }
 
-}
-
-interface Profile {
-  id: string;
 }
