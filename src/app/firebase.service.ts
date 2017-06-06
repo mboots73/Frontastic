@@ -34,8 +34,11 @@ export class FirebaseService {
         this.userEmail = user.email;
         this.users = this.afd.list('/users');
         this.users.push({username: this.userName, email: this.userEmail, role: 'admin'});
+
       });
+
 }
+
   }
 
 
