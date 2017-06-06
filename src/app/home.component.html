@@ -19,6 +19,7 @@
     <input type="file" [(ngModel)]="newcourse.coursepicture" name="coursepicture" size="30" (change)="changeListener($event)">
     <img src="Error.src" id="profile-img-tag" width="150px" />
     <button (click)="addCourse(newcourse.input, newcourse.coursepicture)" type="submit" [disabled]="!f.valid">Add this course</button>
+    
   </form>
 </div>
 

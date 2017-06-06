@@ -40,6 +40,8 @@ export class FirebaseService {
       });
 
     }
+
+
   }
 
   getUsers() {
@@ -54,9 +56,9 @@ export class FirebaseService {
     this.courses.push(course);
   }
   //drops all courses
-  //  deleteCourse() {
-  //   this.course.remove();
-  //  }
+   deleteCourse(item:any) {
+    this.afd.list('/courses').remove(item.$key);
+   }
 
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
