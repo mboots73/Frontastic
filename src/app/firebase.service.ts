@@ -35,19 +35,22 @@ export class FirebaseService {
         this.userName = user.displayName;
         this.userImage = user.photoURL;
         this.userEmail = user.email;
-        this.users = this.afd.list('/users');
-        this.users.push({ username: this.userName, email: this.userEmail, role: 'admin' });
+
       });
 
     }
 
 
   }
+  addUsers() {
+      this.users.push({ username: this.userName, email: this.userEmail, role: 'user' });
+  }
 
   getUsers() {
     this.users = this.afd.list('/users') as FirebaseListObservable<any[]>
     return this.users;
   }
+
   getCourses() {
     this.courses = this.afd.list('/courses') as FirebaseListObservable<any[]>
     return this.courses;
@@ -57,8 +60,8 @@ export class FirebaseService {
   }
   //drops all courses
    deleteCourse(item:any) {
-    this.afd.list('/courses').remove(item.$key);
-   }
+  //     this.courses.splice(this.courses.indexOf(item),1);
+    }
 
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
