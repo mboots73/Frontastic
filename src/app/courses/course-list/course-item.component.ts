@@ -10,13 +10,18 @@ import { FirebaseService } from '../../firebase.service';
 export class CourseItemComponent implements OnInit {
   @Input() course: Course;
   courseId: number;
+  courses:any;
 
-  constructor(private fs: FirebaseService) { }
+  constructor(private fs: FirebaseService) {
+  }
 
   ngOnInit() {
-  }
+    this.fs.getCourses().subscribe(courses => {
+    this.courses = courses;
+  });
+}
   deleteCourse(item) {
-    this.fs.deleteCourse(item);
-  }
+     this.fs.deleteCourse(item);
+   }
 
 }

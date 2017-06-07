@@ -60,8 +60,10 @@ export class FirebaseService {
   }
   //drops all courses
    deleteCourse(item:any) {
-  //     this.courses.splice(this.courses.indexOf(item),1);
+      // this.courses.remove(this.courses.indexOf(item));
+
     }
+    
 
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());

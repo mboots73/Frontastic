@@ -17,6 +17,4 @@ courses:any;
       this.courses = courses;
     });
   }
-
-
 }
