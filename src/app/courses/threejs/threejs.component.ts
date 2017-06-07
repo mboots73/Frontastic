@@ -17,9 +17,9 @@ export class ThreejsComponent implements OnInit {
   lesson1url:any;
   image:any;
     constructor(private fs: FirebaseService) {
-      this.fs.getCourses().subscribe(courses => {
+      this.fs.getCoursesAll().subscribe(courses => {
         this.courses = courses;
-        this.ts = this.courses[6];
+        this.ts = this.courses[7];
     this.name = this.ts.name;
     this.category = this.ts.category;
     this.description = this.ts.explanation;

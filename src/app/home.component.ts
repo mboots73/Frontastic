@@ -3,48 +3,60 @@ import { FirebaseService } from './firebase.service';
 import {Course } from './courses/course';
 import { NgForm } from '@angular/forms';
 import * as firebase from 'firebase';
+import { AngularFireAuth } from 'angularfire2/auth';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-@Input() course: Course;
-public  newcourse =  {
+  @Input() course: Course;
+  users: any;
+  public newcourse = {
     input: '',
     coursepicture: ''
   };
-  constructor(private fs: FirebaseService) { }
+  isStudent: any;
+  isEditor: any;
+  isAdmin: any;
+  constructor(private fs: FirebaseService, public afAuth: AngularFireAuth) {
+    this.fs.getUsers().subscribe(users => {
+      this.users = users;
+      this.isStudent = this.users[0].role === 'student';
+      this.isAdmin = this.users[0].role === 'admin';
+      this.isEditor = this.users[0].role === 'editor';
+    })
+  }
 
   ngOnInit() {
   }
   addCourse(input, coursepicture) {
     const newCourse = new Course('category', 'This course is about: ' + input, 'explanation', coursepicture,
-    'done.png', 'progress.png','lesson1', '/courses/'+input+'/lesson1','lesson2',input, '0', '/courses/'+input);
+      'lesson1', '/courses/' + input + '/lesson1', 'lesson2', input, '0', '/courses/' + input);
     this.fs.addCourse(newCourse);
     console.log(input)
   }
-  
+
   onSubmit(form: NgForm) {
     console.log(form.valid)
     console.log(this.newcourse)
   }
-  changeListener($event):void {
+  changeListener($event): void {
     this.readThis($event.target);
   }
-  readThis(inputValue:any):void {
+  readThis(inputValue: any): void {
 
-    var file:File = inputValue.files[0];
+    var file: File = inputValue.files[0];
     var storageRef = firebase.storage().ref('images/' + file.name);
     var task = storageRef.put(file);
-     var myReader: FileReader = new FileReader();
-     var fileType = inputValue.parentElement.id;
-     myReader.onloadend = (e) => {
-        console.log(this.newcourse.coursepicture = myReader.result);
-    //console.log(document.getElementById('profile-img-tag').setAttribute('src', myReader.result));
+    var myReader: FileReader = new FileReader();
+    var fileType = inputValue.parentElement.id;
+    myReader.onloadend = (e) => {
+      console.log(this.newcourse.coursepicture = myReader.result);
+      //console.log(document.getElementById('profile-img-tag').setAttribute('src', myReader.result));
 
-     }
-     myReader.readAsDataURL(inputValue.files[0]);
+    }
+    myReader.readAsDataURL(inputValue.files[0]);
   }
 
 }

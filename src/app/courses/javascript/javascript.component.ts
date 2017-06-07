@@ -16,7 +16,7 @@ export class JavascriptComponent implements OnInit {
   lesson1url:any;
   image:any;
     constructor(private fs: FirebaseService) {
-      this.fs.getCourses().subscribe(courses => {
+      this.fs.getCoursesAll().subscribe(courses => {
         this.courses = courses;
         this.js = this.courses[5];
     this.name = this.js.name;
