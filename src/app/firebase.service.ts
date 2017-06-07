@@ -56,14 +56,16 @@ export class FirebaseService {
     return this.courses;
   }
   addCourse(course) {
-    this.courses.push(course);
+    let db = firebase.database();
+    db.ref("courses/" + course.name ).set(course);
+
   }
   //drops all courses
    deleteCourse(item:any) {
       // this.courses.remove(this.courses.indexOf(item));
 
     }
-    
+
 
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());

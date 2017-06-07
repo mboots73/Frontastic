@@ -18,7 +18,7 @@ export class JqueryComponent implements OnInit {
     constructor(private fs: FirebaseService) {
       this.fs.getCourses().subscribe(courses => {
         this.courses = courses;
-        this.jq = this.courses[7];
+        this.jq = this.courses[6];
     this.name = this.jq.name;
     this.category = this.jq.category;
     this.description = this.jq.explanation;
