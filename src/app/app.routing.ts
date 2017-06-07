@@ -21,7 +21,7 @@ import { AuthguardService } from './authguard.service';
 
 const APP_ROUTES: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'courses', component: HomeComponent},//canActivate: [AuthguardService] }
+  { path: 'courses', component: HomeComponent, canActivate: [AuthguardService] },
   { path: 'profile', component: ProfileComponent },
   { path: 'profile/settings', component: SettingsComponent},//canActivate: [AuthguardService] }
   { path: 'profile/progress', component: ProgressComponent},//canActivate: [AuthguardService] }

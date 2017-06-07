@@ -24,9 +24,9 @@ export class UsersComponent implements OnInit {
             //  this.fs.addUsers();
 
           }
-          console.log(this.users[0].email === this.afAuth.auth.currentUser.email);
-          console.log(this.users[0].email);
-          console.log(this.afAuth.auth.currentUser.email);
+          // console.log(this.users[0].email === this.afAuth.auth.currentUser.email);
+          // console.log(this.users[0].email);
+          // console.log(this.afAuth.auth.currentUser.email);
     });
 
   }

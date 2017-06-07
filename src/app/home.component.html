@@ -6,7 +6,7 @@
 <br />
 
 <course-courses></course-courses>
-<div class="list-group-item-clearfix">
+<div class="list-group-item-clearfix"  *ngIf="isAdmin || isEditor">
   <span>
       <img class = "img-responsive"
                   src = "/assets/NewCourse.png"
@@ -14,7 +14,7 @@
         />
 
   </span>
-  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm" >
     <input type="text" [(ngModel)]="newcourse.input" placeholder="What course do you want to add?" name="input">
     <input type="file" [(ngModel)]="newcourse.coursepicture" name="coursepicture" size="30" (change)="changeListener($event)">
     <img src="Error.src" id="profile-img-tag" width="150px" />
