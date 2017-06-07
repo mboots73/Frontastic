@@ -29,40 +29,38 @@ export class TemplateComponent implements OnInit {
   courses: any;
   constructor(private af: AngularFireDatabase, private fs: FirebaseService) {
     this.fs.getCourses().subscribe(courses => {
-    this.courses = courses;
-  });
+      this.courses = courses;
+    });
   }
 
 
   ngOnInit() {
 
-}
+  }
 
 
   progressImage() {
     var name = this.name;
-    console.log(this.name)
-  let db = firebase.database();
-  db.ref("courses/"+ this.name + "/imageurl").set("/assets/" + this.name + "-inprogress.png");
-  this.updateProgressEnroll()
+    let db = firebase.database();
+    db.ref("courses/" + this.name + "/imageurl").set("/assets/" + this.name + "-inprogress.png");
+    this.updateProgressEnroll()
 
   }
   finishedImage() {
     var name = this.name;
     let db = firebase.database();
-    db.ref("courses/"+  this.name + "/imageurl").set("/assets/" + this.name +"-done.png");
+    db.ref("courses/" + this.name + "/imageurl").set("/assets/" + this.name + "-done.png");
     this.updateProgressFinish()
-}
+  }
   updateProgressEnroll() {
-      var name = this.name;
+    var name = this.name;
     let db = firebase.database();
     db.ref("courses/" + this.name + "/progress").set("10");
     console.log("updated the progress to 10% for", this.name);
 
-
   }
   updateProgressFinish() {
-      var name = this.name;
+    var name = this.name;
     let db = firebase.database();
     db.ref("courses/" + this.name + "/progress").set("100");
     console.log("updated the progress to 100% for", this.name);
