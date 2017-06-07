@@ -13,7 +13,7 @@ export class CourseListComponent implements OnInit {
 courses:any;
   constructor(private fs: FirebaseService) { }
   ngOnInit() {
-      this.fs.getCourses().subscribe(courses => {
+      this.fs.getCoursesSpecific().subscribe(courses => {
       this.courses = courses;
     });
   }

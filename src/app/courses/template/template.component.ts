@@ -28,7 +28,7 @@ export class TemplateComponent implements OnInit {
   @Input() imageurldone: string;
   courses: any;
   constructor(private af: AngularFireDatabase, private fs: FirebaseService) {
-    this.fs.getCourses().subscribe(courses => {
+    this.fs.getCoursesAll().subscribe(courses => {
       this.courses = courses;
     });
   }

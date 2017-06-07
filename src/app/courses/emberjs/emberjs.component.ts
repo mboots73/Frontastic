@@ -16,7 +16,7 @@ export class EmberjsComponent implements OnInit {
   lesson1url:any;
   image:any;
     constructor(private fs: FirebaseService) {
-      this.fs.getCourses().subscribe(courses => {
+      this.fs.getCoursesAll().subscribe(courses => {
         this.courses = courses;
         this.ember = this.courses[3];
     this.name = this.ember.name;

@@ -16,7 +16,7 @@ export class AngularjsComponent implements OnInit {
   lesson1url:any;
   image:any;
     constructor(private fs: FirebaseService) {
-      this.fs.getCourses().subscribe(courses => {
+      this.fs.getCoursesAll().subscribe(courses => {
         this.courses = courses;
         this.angular = this.courses[0];
     this.name = this.angular.name;

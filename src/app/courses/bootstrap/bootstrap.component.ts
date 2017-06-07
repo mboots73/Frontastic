@@ -17,7 +17,7 @@ export class BootstrapComponent implements OnInit {
     lesson1url:any;
     image:any;
       constructor(private fs: FirebaseService) {
-        this.fs.getCourses().subscribe(courses => {
+        this.fs.getCoursesAll().subscribe(courses => {
           this.courses = courses;
           this.bootstrap = this.courses[1];
       this.name = this.bootstrap.name;

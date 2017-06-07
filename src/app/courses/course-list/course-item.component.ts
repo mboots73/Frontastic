@@ -16,7 +16,7 @@ export class CourseItemComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.fs.getCourses().subscribe(courses => {
+    this.fs.getCoursesSpecific().subscribe(courses => {
     this.courses = courses;
   });
 }

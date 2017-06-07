@@ -51,10 +51,20 @@ export class FirebaseService {
     return this.users;
   }
 
-  getCourses() {
+  getCoursesSpecific() {
+    //specific for a user, in this case admin1
+    // this.courses = this.afd.list('users/admin1/courses') as FirebaseListObservable<any[]>
+    //all courses available in the database
     this.courses = this.afd.list('/courses') as FirebaseListObservable<any[]>
     return this.courses;
   }
+
+  getCoursesAll() {
+    this.courses = this.afd.list('/courses') as FirebaseListObservable<any[]>
+    return this.courses;
+  }
+
+
   addCourse(course) {
     let db = firebase.database();
     db.ref("courses/" + course.name ).set(course);
