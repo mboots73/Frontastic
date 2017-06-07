@@ -14,5 +14,10 @@ ul li {
   font-family: Cambria, serif;
   margin-left: 16px;
   color: #DFDCE3;
+}
 
+ul {
+  column-count: 3;
+ column-gap: 10px;
+ list-style: none;
 }

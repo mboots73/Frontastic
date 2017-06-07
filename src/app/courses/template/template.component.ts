@@ -26,45 +26,46 @@ export class TemplateComponent implements OnInit {
   @Input() lesson1url: string;
   @Input() imageurlprogress: string;
   @Input() imageurldone: string;
-  constructor(private af: AngularFireDatabase) {
-
+  courses: any;
+  constructor(private af: AngularFireDatabase, private fs: FirebaseService) {
+    this.fs.getCourses().subscribe(courses => {
+      this.courses = courses;
+    });
   }
 
 
   ngOnInit() {
-    var name = this.name;
-    var storageRef = firebase.storage().ref();
-    var imagesRef = storageRef.child('images');
-    var emberRef = imagesRef.child(name + '.png');
-    var emberPath = emberRef.getDownloadURL().then(function(url) {
-      // var downLoadUrl = url;
-      var img = <HTMLInputElement>document.getElementById('myImage');
-      img.src = url;
-  })
-}
+
+  }
 
 
   progressImage() {
     var name = this.name;
-    var storageRef = firebase.storage().ref();
-    var imagesRef = storageRef.child('images');
-    var imageRef = imagesRef.child(name + '-inprogress.png');
-    var imagePath = imageRef.getDownloadURL().then(function(url) {
-      var img = <HTMLInputElement>document.getElementById('myImage');
-      img.src = url;
-  })
+    let db = firebase.database();
+    db.ref("courses/" + this.name + "/imageurl").set("/assets/" + this.name + "-inprogress.png");
+    this.updateProgressEnroll()
 
   }
   finishedImage() {
     var name = this.name;
-    var storageRef = firebase.storage().ref();
-    var imagesRef = storageRef.child('images');
-    var imageRef = imagesRef.child(name + '-done.png');
-    var imagePath = imageRef.getDownloadURL().then(function(url) {
-      var img = <HTMLInputElement>document.getElementById('myImage');
-      img.src = url;
+    let db = firebase.database();
+    db.ref("courses/" + this.name + "/imageurl").set("/assets/" + this.name + "-done.png");
+    this.updateProgressFinish()
+  }
+  updateProgressEnroll() {
+    var name = this.name;
+    let db = firebase.database();
+    db.ref("courses/" + this.name + "/progress").set("10");
+    console.log("updated the progress to 10% for", this.name);
 
-  })
+  }
+  updateProgressFinish() {
+    var name = this.name;
+    let db = firebase.database();
+    db.ref("courses/" + this.name + "/progress").set("100");
+    console.log("updated the progress to 100% for", this.name);
 
-}
+
+  }
+
 }

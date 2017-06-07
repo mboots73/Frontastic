@@ -4,11 +4,13 @@
 <br />
 
 
-<h1> Users </h1>
+<h1> Active users </h1>
 <br />
 <h1>
  <ul>
-   <li *ngFor="let user of users" >{{user.username}} ---- {{user.email}} ----- {{user.role}}</li>
+   <li *ngFor="let user of users" >Name: {{ user.username}} </li>
+   <li *ngFor="let user of users" >Email: {{ user.email}}   </li>
+   <li *ngFor="let user of users" >Role: {{ user.role}}</li>
  </ul>
 
 </h1>

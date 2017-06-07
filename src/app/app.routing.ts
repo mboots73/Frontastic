@@ -21,11 +21,11 @@ import { AuthguardService } from './authguard.service';
 
 const APP_ROUTES: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'courses', component: HomeComponent, canActivate: [AuthguardService] },
+  { path: 'courses', component: HomeComponent},//canActivate: [AuthguardService] }
   { path: 'profile', component: ProfileComponent },
-  { path: 'profile/settings', component: SettingsComponent, canActivate: [AuthguardService] },
-  { path: 'profile/progress', component: ProgressComponent,canActivate: [AuthguardService] },
-  { path: 'profile/users', component: UsersComponent,canActivate: [AuthguardService] },
+  { path: 'profile/settings', component: SettingsComponent},//canActivate: [AuthguardService] }
+  { path: 'profile/progress', component: ProgressComponent},//canActivate: [AuthguardService] }
+  { path: 'profile/users', component: UsersComponent},//canActivate: [AuthguardService] }
   { path: 'courses/html', component: HtmlComponent},//canActivate: [AuthguardService] }
   { path: 'courses/css', component: CssComponent},//canActivate: [AuthguardService] }
   { path: 'courses/jquery', component: JqueryComponent},//canActivate: [AuthguardService] }
