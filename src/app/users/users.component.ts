@@ -9,10 +9,18 @@ import { AngularFireAuth } from 'angularfire2/auth';
 export class UsersComponent implements OnInit {
 
   users: any;
-  constructor(private fs: FirebaseService, public afAuth: AngularFireAuth ) {
-
-
+  isStudent: any;
+  isEditor: any;
+  isAdmin: any;
+  constructor(private fs: FirebaseService, public afAuth: AngularFireAuth) {
+    this.fs.getUsers().subscribe(users => {
+      this.users = users;
+      this.isStudent = this.users[0].role === 'student';
+      this.isAdmin = this.users[0].role === 'admin';
+      this.isEditor = this.users[0].role === 'editor';
+    })
   }
+
 
   ngOnInit() {
     this.fs.getUsers().subscribe(users => {

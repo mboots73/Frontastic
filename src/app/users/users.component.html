@@ -7,7 +7,7 @@
 <h1> Active users </h1>
 <br />
 <h1>
- <ul>
+ <ul *ngIf="isAdmin">
    <li *ngFor="let user of users" >Name: {{ user.username}} </li>
    <li *ngFor="let user of users" >Email: {{ user.email}}   </li>
    <li *ngFor="let user of users" >Role: {{ user.role}}</li>
