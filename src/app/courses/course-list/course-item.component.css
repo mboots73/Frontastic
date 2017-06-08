@@ -1,17 +1,16 @@
 a .list-group-item-heading {
   font-size: 16px;
-font-weight: normal;
+  font-weight: normal;
   font-family: Cambria;
 }
 
 a .list-group-item-heading, .list-group-item-clearfix {
-    text-decoration: none;
-      color: #f2efe9;
-
+  text-decoration: none;
+  color: #f2efe9;
 }
 
 .list-group-item-clearfix {
-  border: solid 0.001em  transparent;
+  border: solid 0.001em transparent;
   border-radius: 10px;
   width: 260px;
   height: 260px;
@@ -21,7 +20,7 @@ a .list-group-item-heading, .list-group-item-clearfix {
   flex-direction: column;
   float: left;
   font-size: 14px;
-font-weight: normal;
+  font-weight: normal;
   font-family: Cambria;
 }
 
@@ -29,7 +28,7 @@ font-weight: normal;
   height: 140px;
   width: auto;
   display: block;
-  margin:auto;
+  margin: auto;
   border-radius: 10px;
 }
 
@@ -38,7 +37,7 @@ font-weight: normal;
 }
 
 .list-group-item-clearfix:hover {
-  border: solid 0.001em  #F7B733;
+  border: solid 0.001em #F7B733;
   background-color: #F7B733;
   opacity: 0.6;
 }
@@ -75,9 +74,10 @@ button {
   border-radius: 50%;
   background-color: white;
   color: red;
-  border:white;
+  border: white;
   z-index: -1;
 }
+
 button:hover {
-  cursor: crosshair;
+  cursor: pointer;
 }

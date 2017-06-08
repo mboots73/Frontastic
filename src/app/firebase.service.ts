@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
 import { webStorageModule } from 'angular-webstorage-master';
-
+import {LocalStorage, SessionStorage} from "angular2-localstorage/WebStorage";
 
 @Injectable()
 export class FirebaseService {
@@ -21,12 +21,13 @@ export class FirebaseService {
   name: any;
   userName: string;
   userImage: any;
-  userEmail: string;
+  @LocalStorage() userEmail: string;
   users: any;
   User: any;
   usersRef: any;
   currentUsers: any[];
-
+  currentUser:any;
+  currentUserEmail:any;
   constructor(private afd: AngularFireDatabase, public afAuth: AngularFireAuth, private router: Router) {
     this.user = afAuth.authState;
     // console.log(this.user);
@@ -43,7 +44,7 @@ export class FirebaseService {
 
   }
   addUsers() {
-      this.users.push({ username: this.userName, email: this.userEmail, role: 'user' });
+    this.users.push({ username: this.userName, email: this.userEmail, role: 'user' });
   }
 
   getUsers() {
@@ -67,16 +68,17 @@ export class FirebaseService {
 
   addCourse(course) {
     let db = firebase.database();
-    db.ref("courses/" + course.name ).set(course);
+    db.ref("courses/" + course.name).set(course);
 
   }
-  
+
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
     this.afAuth.authState.subscribe(auth => {
       if (auth) {
         this.router.navigateByUrl('/profile');
-      }
+      localStorage.setItem('currentUser', JSON.stringify({token: auth.uid, name: auth.displayName, email: auth.email, role: 'admin'}));
+        }
     });
 
   }
