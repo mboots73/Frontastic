@@ -76,7 +76,8 @@ button {
   background-color: white;
   color: red;
   border:white;
+  z-index: -1;
 }
 button:hover {
-  cursor: pointer;
+  cursor: crosshair;
 }
