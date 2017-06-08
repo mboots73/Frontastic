@@ -19,7 +19,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 
 html {
   background-color: #DFDCE3;
-    width: 0px;
+  width: 0px;
   height: 0px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -44,8 +44,9 @@ body {
   line-height: 1.6rem;
   min-height: 100%;
 }
+
 header {
-  background: linear-gradient(#F7B733  97%, #FC4A1A 3%);
+  background: linear-gradient(#F7B733 97%, #FC4A1A 3%);
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
   display: block;
@@ -118,14 +119,14 @@ header>nav>ul>li a+div>ul>li>a {
 
 header>nav>ul>li a+div>ul>li:hover>a {
   background-color: #f15329;
-    color: #DFDCE3;
-}
-header>nav>ul>li>a> div {
-  font-size: 24px;
-font-weight: normal;
-  font-family: Cambria;
+  color: #DFDCE3;
 }
 
+header>nav>ul>li>a>div {
+  font-size: 24px;
+  font-weight: normal;
+  font-family: Cambria;
+}
 
 header>nav>ul>li>a {
   align-items: flex-start;
@@ -170,7 +171,6 @@ img {
   left: 6%;
   top: 12%;
   width: 85%;
-
 }
 
 header nav ul #profile {

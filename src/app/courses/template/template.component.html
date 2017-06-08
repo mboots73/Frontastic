@@ -18,8 +18,8 @@
   </span>
     <div>
       <div id="enroll">
-        <button (click)="progressImage()">Enroll</button>
-        <button (click)="finishedImage()">Finished</button>
+        <button *ngIf="Admin || Student" (click)="progressImage()">Enroll</button>
+        <button *ngIf="Admin || Student" (click)="finishedImage()">Finished</button>
       </div>
     </div>
   </div>

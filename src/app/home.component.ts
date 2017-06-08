@@ -12,24 +12,37 @@ import { AngularFireAuth } from 'angularfire2/auth';
 export class HomeComponent implements OnInit {
   @Input() course: Course;
   users: any;
+  public Student: boolean;
+  public Editor: boolean;
+  public Admin: boolean;
   public newcourse = {
     input: '',
     coursepicture: ''
   };
-  isStudent: any;
-  isEditor: any;
-  isAdmin: any;
+
   constructor(private fs: FirebaseService, public afAuth: AngularFireAuth) {
-    this.fs.getUsers().subscribe(users => {
-      this.users = users;
-      this.isStudent = this.users[0].role === 'student';
-      this.isAdmin = this.users[0].role === 'admin';
-      this.isEditor = this.users[0].role === 'editor';
-    })
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let currentRole = currentUser.role
+    if (currentRole === 'admin') {
+      this.Admin = true
+      this.Editor = false;
+      this.Student = false;
+    }
+    else if (currentRole === 'editor') {
+      this.Editor = true;
+      this.Student = false;
+      this.Admin = false;
+    }
+    else {
+      this.Student = true;
+      this.Admin = false;
+      this.Editor = false;
+    }
   }
 
   ngOnInit() {
   }
+
   addCourse(input, coursepicture) {
     const newCourse = new Course('category', 'This course is about: ' + input, 'explanation', coursepicture,
       'lesson1', '/courses/' + input + '/lesson1', 'lesson2', input, '0', '/courses/' + input);
@@ -53,8 +66,6 @@ export class HomeComponent implements OnInit {
     var fileType = inputValue.parentElement.id;
     myReader.onloadend = (e) => {
       console.log(this.newcourse.coursepicture = myReader.result);
-      //console.log(document.getElementById('profile-img-tag').setAttribute('src', myReader.result));
-
     }
     myReader.readAsDataURL(inputValue.files[0]);
   }

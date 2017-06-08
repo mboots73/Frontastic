@@ -3,26 +3,27 @@
     <ul>
       <li>
         <a href="/courses">
-          <div id = "course_hidden">
+          <div id="course_hidden">
             <img src="/assets/logo-totaal.png" /> Courses
           </div>
         </a>
       </li>
       <li id="profile">
-        <a [routerLink]= "['/profile']" >
+        <a *ngIf="Admin || Student" [routerLink]="['/profile']">
           <div>
             Profile
           </div>
         </a>
         <div>
           <ul>
-            <li><a [routerLink]= "['/profile/progress']">Progress</a></li>
-            <li><a [routerLink]= "['/profile/settings']">Settings</a></li>
-            <li><a [routerLink]= "['/profile/users']">Users</a></li>
-            <li><a (click) = "logout()">Logout</a></li>
+            <li><a [routerLink]="['/profile/progress']">Progress</a></li>
+            <li><a [routerLink]="['/profile/settings']">Settings</a></li>
+            <li *ngIf="Admin"><a [routerLink]="['/profile/users']">Users</a></li>
+            <li><a (click)="logout()">Logout</a></li>
           </ul>
         </div>
       </li>
     </ul>
   </nav>
+
 </header>

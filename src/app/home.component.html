@@ -5,8 +5,8 @@
 <br />
 <br />
 
-<course-courses></course-courses>
-<div class="list-group-item-clearfix"  *ngIf="isAdmin || isEditor">
+<course-courses *ngIf="Admin || Student"></course-courses>
+<div class="list-group-item-clearfix"  *ngIf="Admin || Editor">
   <span>
       <img class = "img-responsive"
                   src = "/assets/NewCourse.png"

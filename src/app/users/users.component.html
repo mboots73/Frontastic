@@ -6,11 +6,8 @@
 
 <h1> Active users </h1>
 <br />
-<h1>
- <ul *ngIf="isAdmin">
+ <ul>
    <li *ngFor="let user of users" >Name: {{ user.username}} </li>
    <li *ngFor="let user of users" >Email: {{ user.email}}   </li>
    <li *ngFor="let user of users" >Role: {{ user.role}}</li>
  </ul>
-
-</h1>
