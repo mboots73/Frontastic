@@ -5,7 +5,7 @@
 <br />
 <br />
 
-<course-courses></course-courses>
+<course-courses *ngIf="Admin || Student"></course-courses>
 <div class="list-group-item-clearfix"  *ngIf="Admin || Editor">
   <span>
       <img class = "img-responsive"
