@@ -1,0 +1,179 @@
+{
+  "courses" : {
+    "Angularjs" : {
+      "category" : "JavaScript framework",
+      "description" : "A JavaScript MVC framework",
+      "explanation" : "AngularJS is a JavaScript-based open-source front-end web application framework, mainly used for developing single-page applications. The aim is to simplify both the development and the testing of such applications by using a framework for client-side MVC and MVVM architectures.",
+      "imageurl" : "/assets/Angularjs-done.png",
+      "lesson1" : "Components, templates & databinding",
+      "lesson2" : "Directives",
+      "name" : "Angularjs",
+      "progress" : "100",
+      "webpageurl" : "/courses/angularjs"
+    },
+    "Bootstrap" : {
+      "category" : "HTML/CSS templates",
+      "description" : "A framework with HTML/CSS templates",
+      "imageurl" : "/assets/Bootstrap.png",
+      "lesson1" : "Get started",
+      "lesson2" : "Example: navigation bar",
+      "name" : "Bootstrap",
+      "progress" : "0",
+      "webpageurl" : "/courses/bootstrap"
+    },
+    "CSS" : {
+      "category" : "Webdesign",
+      "description" : "Language to style web-pages",
+      "imageurl" : "/assets/CSS.png",
+      "lesson1" : "Basics",
+      "lesson2" : "Selectors",
+      "name" : "CSS",
+      "progress" : "0",
+      "webpageurl" : "/courses/css"
+    },
+    "Emberjs" : {
+      "category" : "MVVM framework",
+      "description" : "A JavaScript MVVM framework",
+      "imageurl" : "/assets/Emberjs.png",
+      "lesson1" : "ej lesson1",
+      "lesson2" : "ej lesson2",
+      "name" : "Emberjs",
+      "progress" : 0,
+      "webpageurl" : "/courses/emberjs"
+    },
+    "HTML" : {
+      "category" : "Webstructure",
+      "description" : "Language for creating web-pages",
+      "explanation" : "In this course you will learn the basics of HTML. Hypertext Markup Language(HTML) is the standard language for creating web-pages with the goal to define the structure of it. HTML works with so-called tags that describe the different elements in your document. Mostly HTML is combined with CSS and JavaScript, which will be covered in other courses.",
+      "imageurl" : "/assets/HTML-inprogress.png",
+      "lesson1" : "Structure",
+      "lesson1url" : "/courses/html/lesson1",
+      "lesson2" : "Elements",
+      "name" : "HTML",
+      "progress" : "10",
+      "webpageurl" : "/courses/html"
+    },
+    "JavaScript" : {
+      "category" : "Interactive webpages",
+      "description" : "Language to make your webpages interactive",
+      "imageurl" : "/assets/JavaScript.png",
+      "lesson1" : "Functional",
+      "lesson2" : "Prototypes",
+      "name" : "JavaScript",
+      "progress" : 0,
+      "webpageurl" : "/courses/javascript"
+    },
+    "Jquery" : {
+      "category" : "JavaScript library",
+      "description" : "A JavaScript library",
+      "imageurl" : "/assets/Jquery.png",
+      "lesson1" : "Usage",
+      "lesson2" : "Chaining",
+      "name" : "Jquery",
+      "progress" : "0",
+      "webpageurl" : "/courses/jquery"
+    },
+    "Threejs" : {
+      "category" : "3D library",
+      "description" : "A JavaScript 3D library",
+      "imageurl" : "/assets/Threejs.png",
+      "lesson1" : "Scenes",
+      "lesson2" : "Animations",
+      "name" : "Threejs",
+      "progress" : "0",
+      "webpageurl" : "/courses/threejs"
+    }
+  },
+  "users" : [ null, {
+    "courses" : {
+      "Angularjs" : {
+        "category" : "JavaScript framework",
+        "description" : "A JavaScript MVC framework",
+        "explanation" : "AngularJS is a JavaScript-based open-source front-end web application framework, mainly used for developing single-page applications. The aim is to simplify both the development and the testing of such applications by using a framework for client-side MVC and MVVM architectures.",
+        "imageurl" : "/assets/Angularjs.png",
+        "lesson1" : "Components, templates & databinding",
+        "lesson2" : "Directives",
+        "name" : "Angularjs",
+        "progress" : "0",
+        "webpageurl" : "/courses/angularjs"
+      },
+      "CSS" : {
+        "category" : "Webdesign",
+        "description" : "Language to style web-pages",
+        "imageurl" : "/assets/CSS.png",
+        "lesson1" : "Basics",
+        "lesson2" : "Selectors",
+        "name" : "CSS",
+        "progress" : "0",
+        "webpageurl" : "/courses/css"
+      },
+      "Emberjs" : {
+        "category" : "MVVM framework",
+        "description" : "A JavaScript MVVM framework",
+        "imageurl" : "/assets/Emberjs.png",
+        "lesson1" : "ej lesson1",
+        "lesson2" : "ej lesson2",
+        "name" : "Emberjs",
+        "progress" : 0,
+        "webpageurl" : "/courses/emberjs"
+      }
+    },
+    "email" : "mboots@sogyo.nl",
+    "role" : "admin",
+    "username" : "Marjolein Boots"
+  }, {
+    "courses" : {
+      "Bootstrap" : {
+        "category" : "HTML/CSS templates",
+        "description" : "A framework with HTML/CSS templates",
+        "imageurl" : "/assets/Bootstrap.png",
+        "lesson1" : "Get started",
+        "lesson2" : "Example: navigation bar",
+        "name" : "Bootstrap",
+        "progress" : "0",
+        "webpageurl" : "/courses/bootstrap"
+      },
+      "CSS" : {
+        "category" : "Webdesign",
+        "description" : "Language to style web-pages",
+        "imageurl" : "/assets/CSS.png",
+        "lesson1" : "Basics",
+        "lesson2" : "Selectors",
+        "name" : "CSS",
+        "progress" : "0",
+        "webpageurl" : "/courses/css"
+      }
+    },
+    "email" : "kwchui@sogyo.nl",
+    "role" : "editor",
+    "username" : "Kwok Wha Chui"
+  }, {
+    "courses" : {
+      "HTML" : {
+        "category" : "Webstructure",
+        "description" : "Language for creating web-pages",
+        "explanation" : "In this course you will learn the basics of HTML. Hypertext Markup Language(HTML) is the standard language for creating web-pages with the goal to define the structure of it. HTML works with so-called tags that describe the different elements in your document. Mostly HTML is combined with CSS and JavaScript, which will be covered in other courses.",
+        "imageurl" : "/assets/HTML.png",
+        "lesson1" : "Structure",
+        "lesson1url" : "/courses/html/lesson1",
+        "lesson2" : "Elements",
+        "name" : "HTML",
+        "progress" : "0",
+        "webpageurl" : "/courses/html"
+      },
+      "Jquery" : {
+        "category" : "JavaScript library",
+        "description" : "A JavaScript library",
+        "imageurl" : "/assets/Jquery.png",
+        "lesson1" : "Usage",
+        "lesson2" : "Chaining",
+        "name" : "Jquery",
+        "progress" : "0",
+        "webpageurl" : "/courses/jquery"
+      }
+    },
+    "email" : "bootsmarjolein@gmail.com",
+    "role" : "student",
+    "username" : "Iris Kuiters"
+  } ]
+}
