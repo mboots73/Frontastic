@@ -18,11 +18,15 @@
           <ul>
             <li><a [routerLink]= "['/profile/progress']">Progress</a></li>
             <li><a [routerLink]= "['/profile/settings']">Settings</a></li>
-            <li><a [routerLink]= "['/profile/users']">Users</a></li>
+            <li *ngIf= "Admin"><a [routerLink]= "['/profile/users']">Users</a></li>
             <li><a (click) = "logout()">Logout</a></li>
           </ul>
         </div>
       </li>
     </ul>
   </nav>
+
+  <button class="roles" (click)="isEditor()">Editor</button>
+    <button class="roles" (click)= "isAdmin()">Admin</button>
+      <button class="roles" (click)= "isStudent()">Student</button>
 </header>

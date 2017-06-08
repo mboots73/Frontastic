@@ -181,3 +181,21 @@ header nav ul #profile {
 #course_hidden {
   color: #F7B733;
 }
+
+button {
+  background-color: #FC4A1A;
+  color:#DFDCE3;
+  border-radius: 5px;
+  width: 200px ;
+  height: 20px ;
+  text-align: center;
+  border-width: 0px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+}
+
+button:hover {
+  cursor: pointer;
+}
