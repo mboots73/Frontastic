@@ -21,39 +21,26 @@ export class HomeComponent implements OnInit {
   };
 
   constructor(private fs: FirebaseService, public afAuth: AngularFireAuth) {
-    this.fs.getUsers().subscribe(users => {
-      this.users = users;
-      // this.isStudent = this.users[0].role === 'student';
-      // this.isAdmin = this.users[0].role === 'admin';
-      // this.isEditor = this.users[0].role === 'editor';
-    })
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let currentRole = currentUser.role
+    if (currentRole === 'admin') {
+      this.Admin = true
+      this.Editor = false;
+      this.Student = false;
+    }
+    else if (currentRole === 'editor') {
+      this.Editor = true;
+      this.Student = false;
+      this.Admin = false;
+    }
+    else {
+      this.Student = true;
+      this.Admin = false;
+      this.Editor = false;
+    }
   }
 
   ngOnInit() {
-  }
-  isStudent():boolean {
-    this.Student = true;
-    this.Editor = false;
-    this.Admin = false;
-      console.log (this.Student , this.Editor, this.Admin);
-    return this.Student;
-  }
-
-  isAdmin():boolean {
-    this.Student = false;
-    this.Editor = false;
-    this.Admin = true;
-      console.log (this.Student , this.Editor, this.Admin);
-    return this.Admin;
-  }
-
-  isEditor():boolean {
-    this.Student = false;
-    this.Editor = true;
-    this.Admin = false;
-    console.log (this.Student , this.Editor, this.Admin);
-    return this.Editor;
-
   }
 
   addCourse(input, coursepicture) {
@@ -79,8 +66,6 @@ export class HomeComponent implements OnInit {
     var fileType = inputValue.parentElement.id;
     myReader.onloadend = (e) => {
       console.log(this.newcourse.coursepicture = myReader.result);
-      //console.log(document.getElementById('profile-img-tag').setAttribute('src', myReader.result));
-
     }
     myReader.readAsDataURL(inputValue.files[0]);
   }

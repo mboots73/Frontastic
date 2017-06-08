@@ -21,13 +21,13 @@ export class FirebaseService {
   name: any;
   userName: string;
   userImage: any;
-  @LocalStorage() userEmail: string;
+  userEmail: string;
   users: any;
   User: any;
   usersRef: any;
   currentUsers: any[];
-  currentUser:any;
-  currentUserEmail:any;
+  currentUser: any;
+  currentUserEmail: any;
   constructor(private afd: AngularFireDatabase, public afAuth: AngularFireAuth, private router: Router) {
     this.user = afAuth.authState;
     // console.log(this.user);
@@ -77,8 +77,8 @@ export class FirebaseService {
     this.afAuth.authState.subscribe(auth => {
       if (auth) {
         this.router.navigateByUrl('/profile');
-      localStorage.setItem('currentUser', JSON.stringify({token: auth.uid, name: auth.displayName, email: auth.email, role: 'admin'}));
-        }
+        localStorage.setItem('currentUser', JSON.stringify({ token: auth.uid, name: auth.displayName, email: auth.email, role: 'admin' }));
+      }
     });
 
   }

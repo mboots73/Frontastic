@@ -10,36 +10,29 @@ export class HeaderComponent implements OnInit {
   public Editor: boolean;
   public Admin: boolean;
   constructor(private fs: FirebaseService) {
+    let currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    let currentRole = currentUser.role
+    if (currentRole === 'admin') {
+      this.Admin = true
+      this.Editor = false;
+      this.Student = false;
+    }
+    else if (currentRole === 'editor') {
+      this.Editor = true;
+      this.Student = false;
+      this.Admin = false;
+    }
+    else {
+      this.Student = true;
+      this.Admin = false;
+      this.Editor = false;
+    }
+  }
 
-}
-isStudent():boolean {
-  this.Student = true;
-  this.Editor = false;
-  this.Admin = false;
-    console.log (this.Student , this.Editor, this.Admin);
-  return this.Student;
-}
-
-isAdmin():boolean {
-  this.Student = false;
-  this.Editor = false;
-  this.Admin = true;
-    console.log (this.Student , this.Editor, this.Admin);
-  return this.Admin;
-}
-
-isEditor():boolean {
-  this.Student = false;
-  this.Editor = true;
-  this.Admin = false;
-  console.log (this.Student , this.Editor, this.Admin);
-  return this.Editor;
-
-}
   ngOnInit() {
   }
   logout() {
-      this.fs.logout();
-      }
+    this.fs.logout();
+  }
 
 }
