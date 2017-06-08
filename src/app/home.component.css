@@ -92,3 +92,12 @@ img {
 form {
   margin-top: 5px;
 }
+
+
+.roles {
+  display: inline-block;
+}
+
+.roles:hover {
+  cursor: pointer;
+}

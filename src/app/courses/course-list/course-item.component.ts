@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { Course } from '../course';
 import { FirebaseService } from '../../firebase.service';
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Component({
   selector: 'course-item',
@@ -11,8 +12,17 @@ export class CourseItemComponent implements OnInit {
   @Input() course: Course;
   courseId: number;
   courses:any;
-
-  constructor(private fs: FirebaseService) {
+  users: any;
+  isStudent: any;
+  isEditor: any;
+  isAdmin: any;
+  constructor(private fs: FirebaseService, public afAuth: AngularFireAuth) {
+    this.fs.getUsers().subscribe(users => {
+      this.users = users;
+      this.isStudent = this.users[0].role === 'student';
+      this.isAdmin = this.users[0].role === 'admin';
+      this.isEditor = this.users[0].role === 'editor';
+    })
   }
 
   ngOnInit() {

@@ -12,24 +12,50 @@ import { AngularFireAuth } from 'angularfire2/auth';
 export class HomeComponent implements OnInit {
   @Input() course: Course;
   users: any;
+  public Student: boolean;
+  public Editor: boolean;
+  public Admin: boolean;
   public newcourse = {
     input: '',
     coursepicture: ''
   };
-  isStudent: any;
-  isEditor: any;
-  isAdmin: any;
+
   constructor(private fs: FirebaseService, public afAuth: AngularFireAuth) {
     this.fs.getUsers().subscribe(users => {
       this.users = users;
-      this.isStudent = this.users[0].role === 'student';
-      this.isAdmin = this.users[0].role === 'admin';
-      this.isEditor = this.users[0].role === 'editor';
+      // this.isStudent = this.users[0].role === 'student';
+      // this.isAdmin = this.users[0].role === 'admin';
+      // this.isEditor = this.users[0].role === 'editor';
     })
   }
 
   ngOnInit() {
   }
+  isStudent():boolean {
+    this.Student = true;
+    this.Editor = false;
+    this.Admin = false;
+      console.log (this.Student , this.Editor, this.Admin);
+    return this.Student;
+  }
+
+  isAdmin():boolean {
+    this.Student = false;
+    this.Editor = false;
+    this.Admin = true;
+      console.log (this.Student , this.Editor, this.Admin);
+    return this.Admin;
+  }
+
+  isEditor():boolean {
+    this.Student = false;
+    this.Editor = true;
+    this.Admin = false;
+    console.log (this.Student , this.Editor, this.Admin);
+    return this.Editor;
+
+  }
+
   addCourse(input, coursepicture) {
     const newCourse = new Course('category', 'This course is about: ' + input, 'explanation', coursepicture,
       'lesson1', '/courses/' + input + '/lesson1', 'lesson2', input, '0', '/courses/' + input);

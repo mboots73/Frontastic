@@ -6,7 +6,7 @@
 <br />
 
 <course-courses></course-courses>
-<div class="list-group-item-clearfix"  *ngIf="isAdmin || isEditor">
+<div class="list-group-item-clearfix"  *ngIf="Admin || Editor">
   <span>
       <img class = "img-responsive"
                   src = "/assets/NewCourse.png"
@@ -25,4 +25,7 @@
 
 <div class="footer">
   <img src="/assets/logo-klein.jpg" />
+  <button class="roles" (click)="isEditor()">Editor</button>
+    <button class="roles" (click)= "isAdmin()">Admin</button>
+      <button class="roles" (click)= "isStudent()">Student</button>
 </div>

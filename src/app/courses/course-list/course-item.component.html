@@ -1,5 +1,6 @@
 <a href="{{course.urlPath}}" class="list-group-item-clearfix">
   <span>
+        <button (click) = "deleteCourse(item)" *ngIf = "isEditor" >X</button>
       <img id = "image" class = "img-responsive"
                   src = "{{course.imageurl}}"
           style = "..."
@@ -9,7 +10,7 @@
   <div>
     <h4 class="list-group-item-heading">{{course.name}}</h4>
     <p class="list-group-item-text">{{course.description}}</p>
-    <!-- <button (click) = "deleteCourse(item)" >Delete</button> -->
+
 <progress max="100" value="{{course.progress}}" ></progress>
 
   </div>
