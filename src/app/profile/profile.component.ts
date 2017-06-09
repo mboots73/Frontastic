@@ -14,7 +14,7 @@ export class ProfileComponent implements OnInit {
   currentUserEmail: any;
   currentUser: any;
   dbRef: any;
-  constructor(public fs: FirebaseService, public ls: LocalStorageService) {
+  constructor(public fs: FirebaseService) {
     this.userName = this.fs.userName;
     this.userImage = this.fs.userImage;
     this.userEmail = this.fs.userEmail;
