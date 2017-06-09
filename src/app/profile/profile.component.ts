@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseService } from '../firebase.service';
-import { LocalStorage, LocalStorageService} from "angular2-localstorage";
+//import { LocalStorage, LocalStorageService} from "angular2-localstorage";
 import * as firebase from 'firebase';
 @Component({
   selector: 'app-profilecomponent',
