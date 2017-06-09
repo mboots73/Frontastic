@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import * as firebase from 'firebase/app';
 import { webStorageModule } from 'angular-webstorage-master';
-import {LocalStorage, SessionStorage} from "angular2-localstorage/WebStorage";
+// import {LocalStorage, SessionStorage} from "angular2-localstorage/WebStorage";
 
 @Injectable()
 export class FirebaseService {

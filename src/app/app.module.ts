@@ -33,7 +33,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { firebaseConfig } from './../environments/firebase.config';
 import { AuthguardService } from './authguard.service';
 import { FirebaseService } from './firebase.service';
-import {LocalStorageService} from "angular2-localstorage";
+// import {LocalStorageService} from "angular2-localstorage";
 
 //import { webStorageModule } from 'angular-webstorage-master';
 
@@ -74,7 +74,7 @@ import {LocalStorageService} from "angular2-localstorage";
     AngularFireAuthModule
     ],
 
-  providers: [ AuthguardService, FirebaseService, LocalStorageService ],
+  providers: [ AuthguardService, FirebaseService ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
