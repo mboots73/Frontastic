@@ -1,7 +1,7 @@
 <a class="list-group-item-clearfix">
   <span>
 <button (click) = "deleteCourse(course.name)" *ngIf ="Editor || Admin">X</button>
-  <a href="{{course.urlPath}}">
+  <a href="{{course.webpageurl}}">
       <img id = "image" class = "img-responsive"
                   src = "{{course.imageurl}}"
           style = "..."
